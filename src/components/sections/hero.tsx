@@ -103,7 +103,7 @@ export function Hero() {
                             allowFullScreen={true}
                             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                             loading="lazy"
-                            className="max-w-4xl"
+                            className="max-w-5xl"
                         ></iframe>
                     </AnimatedGroup>
 
