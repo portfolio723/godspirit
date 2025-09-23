@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -93,7 +94,7 @@ export function Hero() {
                             },
                             ...transitionVariants,
                         }}
-                        className="mt-12 flex justify-center">
+                        className="mt-12 flex justify-center max-w-5xl mx-auto">
                         <iframe
                             style={{ borderRadius: '12px' }}
                             src="https://open.spotify.com/embed/playlist/4RJDF7epzblJDsPwKx9XXl?utm_source=generator&theme=0"
@@ -103,7 +104,6 @@ export function Hero() {
                             allowFullScreen={true}
                             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                             loading="lazy"
-                            className="max-w-5xl"
                         ></iframe>
                     </AnimatedGroup>
 
