@@ -58,12 +58,11 @@ const VideoPlayer = React.forwardRef<HTMLDivElement, VideoPlayerProps>(
         <div
           ref={ref}
           className={cn(
-            "group relative cursor-pointer overflow-hidden shadow-lg",
+            "group relative cursor-pointer overflow-hidden shadow-lg h-96",
             "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
             "transition-all duration-300 hover:shadow-lg hover:shadow-primary/30 hover:-translate-y-1 hover:border-primary/50 border border-transparent",
             className
           )}
-          style={{ aspectRatio }}
           onClick={() => setIsModalOpen(true)}
           onKeyDown={(e) => e.key === "Enter" && setIsModalOpen(true)}
           tabIndex={0}
