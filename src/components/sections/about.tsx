@@ -1,51 +1,100 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Users, Video, Star } from "lucide-react";
+'use client';
+import {
+  BookOpen,
+  Heart,
+  Lightbulb,
+  Sprout,
+  UserCheck,
+  Globe,
+} from 'lucide-react';
+import { motion, useReducedMotion } from 'framer-motion';
+import { FeatureCard } from '@/components/ui/grid-feature-cards';
 
-const stats = [
-  { icon: Users, value: "10,000+", label: "Lives Touched" },
-  { icon: Video, value: "500+", label: "Messages Shared" },
-  { icon: Star, value: "1,200+", label: "Testimonies Received" },
+const features = [
+  {
+    title: 'Biblical Teaching',
+    icon: BookOpen,
+    description: 'Grounded in biblically-sound teaching to build a strong foundation for your faith.',
+  },
+  {
+    title: 'Prophetic Insight',
+    icon: Lightbulb,
+    description: 'Receive timely prophetic insight to help you navigate the seasons of your life with clarity.',
+  },
+  {
+    title: 'Heartfelt Prayer',
+    icon: Heart,
+    description: 'Experience the power of heartfelt prayer for breakthrough, healing, and restoration.',
+  },
+  {
+    title: 'Divine Prosperity',
+    icon: Sprout,
+    description: 'Learn to walk in the fullness of your God-given identity and prosper in every area.',
+  },
+  {
+    title: 'Walk in Your Calling',
+    icon: UserCheck,
+    description: 'Be empowered to discover and step into your unique, God-given purpose and calling.',
+  },
+  {
+    title: 'Global Community',
+    icon: Globe,
+    description: 'Connect with a global community of believers growing and pursuing God together.',
+  },
 ];
 
 export function About() {
   return (
     <section id="about" className="w-full py-16 sm:py-24 lg:py-32 bg-background">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
-          <div className="flex flex-col justify-center space-y-8">
-            <div className="space-y-4">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary">
-                Our Calling & Mission
-              </h2>
-              <p className="text-muted-foreground md:text-xl/relaxed">
-                Divine Echoes began with a single, clear whisper from God. Our journey is a testament to His faithfulness, a story of stepping out in faith to build a platform for His voice to be heard across the nations.
-              </p>
-            </div>
-            <div className="space-y-4">
-              <h3 className="text-2xl font-bold tracking-tighter text-foreground">Mission Statement</h3>
-              <p className="text-muted-foreground md:text-xl/relaxed">
-                To empower believers to walk in the fullness of their God-given identity and prosper in every area of their lives through biblically-sound teaching, prophetic insight, and heartfelt prayer.
-              </p>
-            </div>
-          </div>
-          <div className="space-y-8">
-            <h3 className="text-2xl font-bold tracking-tighter text-center lg:text-left text-foreground">Ministry Impact</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-              {stats.map((stat) => (
-                <Card key={stat.label} className="text-center bg-card hover:bg-primary/10 transition-colors p-6">
-                  <CardHeader className="items-center pb-2">
-                    <stat.icon className="h-10 w-10 text-primary mb-4" />
-                    <CardTitle className="text-4xl font-bold">{stat.value}</CardTitle>
-                  </CardHeader>
-                  <CardContent className="p-0">
-                    <p className="text-sm text-muted-foreground">{stat.label}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </div>
+      <div className="mx-auto w-full max-w-5xl space-y-8 px-4">
+        <AnimatedContainer className="mx-auto max-w-3xl text-center">
+          <h2 className="text-3xl font-bold tracking-wide text-balance md:text-4xl lg:text-5xl xl:font-extrabold text-primary">
+            Our Calling & Core Beliefs
+          </h2>
+          <p className="text-muted-foreground mt-4 text-sm tracking-wide text-balance md:text-base">
+            To empower believers to walk in the fullness of their God-given identity and prosper in every area of their lives through biblically-sound teaching, prophetic insight, and heartfelt prayer.
+          </p>
+        </AnimatedContainer>
+
+        <AnimatedContainer
+          delay={0.4}
+          className="grid grid-cols-1 divide-x divide-y divide-border/40 divide-dashed border border-dashed border-border/40 sm:grid-cols-2 md:grid-cols-3"
+        >
+          {features.map((feature, i) => (
+            <FeatureCard key={i} feature={feature} />
+          ))}
+        </AnimatedContainer>
       </div>
     </section>
+  );
+}
+
+type ViewAnimationProps = {
+  delay?: number;
+  className?: React.ComponentProps<typeof motion.div>['className'];
+  children: React.ReactNode;
+};
+
+function AnimatedContainer({
+  className,
+  delay = 0.1,
+  children,
+}: ViewAnimationProps) {
+  const shouldReduceMotion = useReducedMotion();
+
+  if (shouldReduceMotion) {
+    return <>{children}</>;
+  }
+
+  return (
+    <motion.div
+      initial={{ filter: 'blur(4px)', translateY: -8, opacity: 0 }}
+      whileInView={{ filter: 'blur(0px)', translateY: 0, opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ delay, duration: 0.8 }}
+      className={className}
+    >
+      {children}
+    </motion.div>
   );
 }
