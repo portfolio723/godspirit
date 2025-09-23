@@ -1,73 +1,125 @@
-import Link from "next/link";
-import { Sprout, Twitter, Facebook, Instagram } from "lucide-react";
+'use client';
+import React from 'react';
+import type { ComponentProps, ReactNode } from 'react';
+import { motion, useReducedMotion } from 'framer-motion';
+import { Sprout, Twitter, Facebook, Instagram, Youtube, Linkedin } from "lucide-react";
 
-const socialLinks = [
-  { icon: Twitter, href: "#", name: "Twitter" },
-  { icon: Facebook, href: "#", name: "Facebook" },
-  { icon: Instagram, href: "#", name: "Instagram" },
-];
+interface FooterLink {
+ 	title: string;
+ 	href: string;
+ 	icon?: React.ComponentType<{ className?: string }>;
+}
 
-const footerNav = [
-  { href: "#about", label: "About" },
-  { href: "#messages", label: "Messages" },
-  { href: "#insights", label: "Insights" },
-  { href: "#testimonials", label: "Testimonials" },
+interface FooterSection {
+ 	label: string;
+ 	links: FooterLink[];
+}
+
+const footerLinks: FooterSection[] = [
+    {
+        label: "Explore",
+        links: [
+            { title: "About", href: "#about" },
+            { title: "Messages", href: "#messages" },
+            { title: "Insights", href: "#insights" },
+            { title: "Testimonials", href: "#testimonials" },
+        ],
+    },
+    {
+        label: "Connect",
+        links: [
+            { title: "Contact", href: "#contact" },
+            { title: "Share Your Story", href: "#" },
+        ],
+    },
+    {
+        label: "Legal",
+        links: [
+            { title: "Privacy Policy", href: "#" },
+            { title: "Terms of Service", href: "#" },
+        ],
+    },
+ 	{
+ 		label: 'Social Links',
+ 		links: [
+ 			{ title: 'Twitter', href: '#', icon: Twitter },
+ 			{ title: 'Facebook', href: '#', icon: Facebook },
+ 			{ title: 'Instagram', href: '#', icon: Instagram },
+ 			{ title: 'LinkedIn', href: '#', icon: Linkedin },
+ 		],
+ 	},
 ];
 
 export function Footer() {
-  return (
-    <footer id="contact" className="border-t border-border/40 bg-card">
-      <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-8 py-16 md:grid-cols-3">
-          <div className="flex flex-col items-start">
-            <Link href="/" className="mb-4 flex items-center space-x-2">
-              <Sprout className="h-8 w-8 text-primary" />
-              <span className="font-headline text-2xl font-bold text-primary">
-                Divine Canvas
-              </span>
-            </Link>
-            <p className="text-muted-foreground">
-              Guiding souls towards divine prosperity and purpose.
-            </p>
-          </div>
-          <div className="md:justify-self-center">
-            <h3 className="mb-4 text-xl font-semibold text-foreground">Explore</h3>
-            <ul className="space-y-3">
-              {footerNav.map((item) => (
-                <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    className="text-muted-foreground transition-colors hover:text-primary"
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="md:justify-self-end">
-             <h3 className="mb-4 text-xl font-semibold text-foreground">Connect With Us</h3>
-            <div className="flex space-x-4">
-              {socialLinks.map((social) => (
-                <Link
-                  key={social.name}
-                  href={social.href}
-                  className="text-muted-foreground transition-colors hover:text-primary"
-                  aria-label={social.name}
-                >
-                  <social.icon className="h-6 w-6" />
-                </Link>
-              ))}
-            </div>
-             <p className="mt-4 text-muted-foreground">contact@divinecanvas.org</p>
-          </div>
-        </div>
-        <div className="border-t border-border/40 py-8 text-center text-sm text-muted-foreground">
-          <p>
-            &copy; {new Date().getFullYear()} Divine Canvas. All rights reserved.
-          </p>
-        </div>
-      </div>
-    </footer>
-  );
-}
+ 	return (
+ 		<footer id="contact" className="relative w-full max-w-6xl mx-auto flex flex-col items-center justify-center rounded-t-4xl border-t bg-card mt-20">
+ 			<div className="grid w-full gap-8 xl:grid-cols-3 xl:gap-8 p-12 lg:p-16">
+ 				<AnimatedContainer className="space-y-4">
+                    <div className="flex flex-col items-start">
+                        <a href="/" className="mb-4 flex items-center space-x-2">
+                        <Sprout className="h-8 w-8 text-primary" />
+                        <span className="font-headline text-2xl font-bold text-primary">
+                            Divine Canvas
+                        </span>
+                        </a>
+                        <p className="text-muted-foreground">
+                            Guiding souls towards divine prosperity and purpose.
+                        </p>
+                    </div>
+ 					<p className="text-muted-foreground mt-8 text-sm md:mt-4">
+ 						© {new Date().getFullYear()} Divine Canvas. All rights reserved.
+ 					</p>
+ 				</AnimatedContainer>
+
+ 				<div className="mt-10 grid grid-cols-2 gap-8 md:grid-cols-4 xl:col-span-2 xl:mt-0">
+ 					{footerLinks.map((section, index) => (
+ 						<AnimatedContainer key={section.label} delay={0.1 + index * 0.1}>
+ 							<div className="mb-10 md:mb-0">
+ 								<h3 className="text-foreground font-semibold mb-4">{section.label}</h3>
+ 								<ul className="text-muted-foreground mt-4 space-y-3 text-sm">
+ 									{section.links.map((link) => (
+ 										<li key={link.title}>
+ 											<a
+ 												href={link.href}
+ 												className="hover:text-primary inline-flex items-center transition-all duration-300"
+ 											>
+ 												{link.icon && <link.icon className="me-2 size-5" />}
+ 												{link.title}
+ 											</a>
+ 										</li>
+ 									))}
+ 								</ul>
+ 							</div>
+ 						</AnimatedContainer>
+ 					))}
+ 				</div>
+ 			</div>
+ 		</footer>
+ 	);
+};
+
+type ViewAnimationProps = {
+ 	delay?: number;
+ 	className?: ComponentProps<typeof motion.div>['className'];
+ 	children: ReactNode;
+};
+
+function AnimatedContainer({ className, delay = 0.1, children }: ViewAnimationProps) {
+ 	const shouldReduceMotion = useReducedMotion();
+
+ 	if (shouldReduceMotion) {
+ 		return <>{children}</>;
+ 	}
+
+ 	return (
+ 		<motion.div
+ 			initial={{ filter: 'blur(4px)', translateY: -8, opacity: 0 }}
+ 			whileInView={{ filter: 'blur(0px)', translateY: 0, opacity: 1 }}
+ 			viewport={{ once: true }}
+ 			transition={{ delay, duration: 0.8 }}
+ 			className={className}
+ 		>
+ 			{children}
+ 		</motion.div>
+ 	);
+};
