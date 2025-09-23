@@ -4,7 +4,7 @@ import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
-  title: 'Divine Canvas',
+  title: 'God Spirit Says',
   description: '"She prospers in all that she does" - Psalms 1:3',
 };
 

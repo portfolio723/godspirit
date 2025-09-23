@@ -59,7 +59,7 @@ export function Footer() {
                         <a href="/" className="mb-4 flex items-center space-x-2">
                         <Crown className="h-8 w-8 text-accent" />
                         <span className="font-headline text-2xl font-bold text-primary">
-                            Divine Canvas
+                            God Spirit Says
                         </span>
                         </a>
                         <p className="text-muted-foreground">
@@ -67,7 +67,7 @@ export function Footer() {
                         </p>
                     </div>
  					<p className="text-muted-foreground mt-8 text-sm md:mt-4">
- 						© {new Date().getFullYear()} Divine Canvas. All rights reserved.
+ 						© {new Date().getFullYear()} God Spirit Says. All rights reserved.
  					</p>
  				</AnimatedContainer>
 
