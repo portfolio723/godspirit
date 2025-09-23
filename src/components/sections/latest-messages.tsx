@@ -1,5 +1,8 @@
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { VideoPlayer } from "@/components/ui/video-thumbnail-player";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 const messages = [
   {
@@ -51,6 +54,14 @@ export function LatestMessages() {
                 />
             );
           })}
+        </div>
+        <div className="mt-16 text-center">
+            <Button asChild size="lg" variant="outline" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground">
+                <Link href="#">
+                    Watch More
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+            </Button>
         </div>
       </div>
     </section>
