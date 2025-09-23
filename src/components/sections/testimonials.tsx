@@ -84,7 +84,6 @@ export function Testimonials() {
           viewport={{ once: true }}
           className="flex flex-col items-center justify-center max-w-[540px] mx-auto text-center"
         >
-          <Badge variant="outline" className="border-accent text-accent mb-6">Testimonials</Badge>
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold tracking-tighter mt-5">
             Lives Touched by the Spirit
           </h2>
