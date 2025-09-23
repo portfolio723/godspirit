@@ -1,3 +1,64 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-background",
+      "description": "A serene, abstract background with flowing purple and gold colors.",
+      "imageUrl": "https://images.unsplash.com/photo-1491186593887-8098d1455a3d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8YWJzdHJhY3QlMjBzcGlyaXR1YWx8ZW58MHx8fHwxNzU4NjQ0MjgxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "abstract spiritual"
+    },
+    {
+      "id": "message-video-1",
+      "description": "Thumbnail for a sermon about faith.",
+      "imageUrl": "https://images.unsplash.com/photo-1737381888501-8be197cfdd50?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxzZXJtb24lMjBmYWl0aHxlbnwwfHx8fDE3NTg2NDQyODF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sermon faith"
+    },
+    {
+      "id": "message-video-2",
+      "description": "Thumbnail for a prophetic message.",
+      "imageUrl": "https://images.unsplash.com/photo-1635250833257-6ef54b5223f7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxwcm9waGV0aWMlMjBsaWdodHxlbnwwfHx8fDE3NTg2NDQyODF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "prophetic light"
+    },
+    {
+      "id": "message-video-3",
+      "description": "Thumbnail for a guided prayer session.",
+      "imageUrl": "https://images.unsplash.com/photo-1437603568260-1950d3ca6eab?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwcmF5ZXIlMjBoYW5kc3xlbnwwfHx8fDE3NTg2NDQyODF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "prayer hands"
+    },
+    {
+      "id": "insight-post-1",
+      "description": "Image for a blog post about spiritual growth.",
+      "imageUrl": "https://images.unsplash.com/photo-1597429806935-3a1f445f3b55?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxzcGlyaXR1YWwlMjBncm93dGh8ZW58MHx8fHwxNzU4NjQ0MjgxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "spiritual growth"
+    },
+    {
+      "id": "insight-post-2",
+      "description": "Image for a blog post on interpreting scripture.",
+      "imageUrl": "https://images.unsplash.com/photo-1698780518755-acb6b868992e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzY3JpcHR1cmUlMjBzdHVkeXxlbnwwfHx8fDE3NTg2NDQyODF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "scripture study"
+    },
+    {
+      "id": "insight-post-3",
+      "description": "Image for a blog post on finding purpose.",
+      "imageUrl": "https://images.unsplash.com/photo-1582191870947-e9c90720173e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZmluZGluZyUyMHB1cnBvc2V8ZW58MHx8fHwxNzU4NjQ0MjgxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "finding purpose"
+    },
+    {
+      "id": "testimonial-avatar-1",
+      "description": "Avatar for a person named Sarah L.",
+      "imageUrl": "https://images.unsplash.com/photo-1609505848912-b7c3b8b4beda?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc1ODY0MDczOHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman portrait"
+    },
+    {
+      "id": "testimonial-avatar-2",
+      "description": "Avatar for a person named David O.",
+      "imageUrl": "https://images.unsplash.com/photo-1715029005043-e88d219a3c48?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NTg1ODI4MTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man portrait"
+    },
+    {
+      "id": "testimonial-avatar-3",
+      "description": "Avatar for a person named Maria G.",
+      "imageUrl": "https://images.unsplash.com/photo-1506277886164-e25aa3f4ef7f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwZXJzb24lMjBzbWlsaW5nfGVufDB8fHx8MTc1ODU4MzY2Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person smiling"
+    }
+  ]
 }
