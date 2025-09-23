@@ -58,7 +58,7 @@ const VideoPlayer = React.forwardRef<HTMLDivElement, VideoPlayerProps>(
         <div
           ref={ref}
           className={cn(
-            "group relative cursor-pointer overflow-hidden rounded-lg shadow-lg",
+            "group relative cursor-pointer overflow-hidden shadow-lg",
             "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
             "transition-all duration-300 hover:shadow-lg hover:shadow-primary/30 hover:-translate-y-1 hover:border-primary/50 border border-transparent",
             className
@@ -119,7 +119,7 @@ const VideoPlayer = React.forwardRef<HTMLDivElement, VideoPlayerProps>(
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
-                    className="h-full w-full rounded-lg"
+                    className="h-full w-full"
                 ></iframe>
             </div>
           </div>
