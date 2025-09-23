@@ -87,7 +87,7 @@ const VideoPlayer = React.forwardRef<HTMLDivElement, VideoPlayerProps>(
 
           {/* Title and Description */}
           <div className="absolute bottom-0 left-0 p-6">
-            <h3 className="text-xl font-semibold text-white">{title}</h3>
+            <h3 className="text-xl font-headline font-semibold text-white">{title}</h3>
             {description && (
               <p className="mt-1 text-sm text-white/80">{description}</p>
             )}
