@@ -77,7 +77,7 @@ export function Hero() {
                             "She prospers in all that she does"
                         </h1>
                         <div className="max-w-4xl mx-auto">
-                            <p className="scripture-quote mt-6 text-accent text-right">
+                            <p className="scripture-quote mt-6 text-accent text-right pr-8">
                                 Psalms 1:3
                             </p>
                         </div>
