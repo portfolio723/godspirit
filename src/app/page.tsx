@@ -5,6 +5,7 @@ import { About } from "@/components/sections/about";
 import { LatestMessages } from "@/components/sections/latest-messages";
 import { SpiritualInsights } from "@/components/sections/spiritual-insights";
 import { Testimonials } from "@/components/sections/testimonials";
+import { LogoCloud } from "@/components/sections/logo-cloud";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <Hero />
+        <LogoCloud />
         <About />
         <LatestMessages />
         <SpiritualInsights />

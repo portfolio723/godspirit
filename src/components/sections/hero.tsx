@@ -2,46 +2,128 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
+import { AnimatedGroup } from "@/components/ui/animated-group";
+
+const transitionVariants = {
+    item: {
+        hidden: {
+            opacity: 0,
+            filter: 'blur(12px)',
+            y: 12,
+        },
+        visible: {
+            opacity: 1,
+            filter: 'blur(0px)',
+            y: 0,
+            transition: {
+                type: 'spring',
+                bounce: 0.3,
+                duration: 1.5,
+            },
+        },
+    },
+}
+
 
 export function Hero() {
   const heroImage = PlaceHolderImages.find((img) => img.id === "hero-background");
 
   return (
-    <section className="relative h-[85vh] w-full">
-      <div className="absolute inset-0">
-        {heroImage && (
-          <Image
-            src={heroImage.imageUrl}
-            alt={heroImage.description}
-            data-ai-hint={heroImage.imageHint}
-            fill
-            className="object-cover"
-            priority
-          />
-        )}
-        <div className="absolute inset-0 bg-black/60" />
-      </div>
-      <div className="relative z-10 container mx-auto flex h-full items-center justify-center text-center text-white">
-        <div className="max-w-4xl">
-          <h1 className="text-4xl font-bold sm:text-5xl md:text-6xl lg:text-7xl !leading-tight">
-            "She prospers in all that she does"
-          </h1>
-          <p className="mt-4 text-2xl text-primary">
-            Psalms 1:3
-          </p>
-          <p className="mt-6 max-w-2xl mx-auto text-lg text-foreground/80 md:text-xl">
-            Welcome to a space of spiritual nourishment and divine encounter. Discover messages that inspire, insights that enlighten, and a community that uplifts.
-          </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Button size="lg" asChild>
-              <Link href="#messages">Latest Messages</Link>
-            </Button>
-            <Button size="lg" variant="outline" className="bg-transparent border-accent text-accent hover:bg-accent hover:text-accent-foreground" asChild>
-              <Link href="#about">Our Mission</Link>
-            </Button>
-          </div>
+    <section>
+        <div className="relative pt-24 md:pt-36">
+            <AnimatedGroup
+                variants={{
+                    container: {
+                        visible: {
+                            transition: {
+                                delayChildren: 1,
+                            },
+                        },
+                    },
+                    item: {
+                        hidden: {
+                            opacity: 0,
+                            y: 20,
+                        },
+                        visible: {
+                            opacity: 1,
+                            y: 0,
+                            transition: {
+                                type: 'spring',
+                                bounce: 0.3,
+                                duration: 2,
+                            },
+                        },
+                    },
+                }}
+                className="absolute inset-0 -z-20">
+                {heroImage && (
+                    <Image
+                        src={heroImage.imageUrl}
+                        alt={heroImage.description}
+                        data-ai-hint={heroImage.imageHint}
+                        fill
+                        className="absolute inset-x-0 top-56 -z-20 hidden object-cover lg:top-32 dark:block"
+                        priority
+                    />
+                )}
+            </AnimatedGroup>
+            <div aria-hidden className="absolute inset-0 -z-10 size-full bg-gradient-to-b from-black/60 to-background" />
+            <div className="mx-auto max-w-7xl px-6">
+                <div className="text-center sm:mx-auto lg:mr-auto lg:mt-0">
+                    <AnimatedGroup variants={transitionVariants}>
+                        <h1
+                            className="mt-8 max-w-4xl mx-auto text-balance text-6xl md:text-7xl lg:mt-16 xl:text-[5.25rem] !leading-tight text-white">
+                            "She prospers in all that she does"
+                        </h1>
+                        <p className="mt-4 text-2xl text-primary">
+                            Psalms 1:3
+                        </p>
+                        <p
+                            className="mx-auto mt-8 max-w-2xl text-balance text-lg text-foreground/80">
+                            Welcome to a space of spiritual nourishment and divine encounter. Discover messages that inspire, insights that enlighten, and a community that uplifts.
+                        </p>
+                    </AnimatedGroup>
+
+                    <AnimatedGroup
+                        variants={{
+                            container: {
+                                visible: {
+                                    transition: {
+                                        staggerChildren: 0.05,
+                                        delayChildren: 0.75,
+                                    },
+                                },
+                            },
+                            ...transitionVariants,
+                        }}
+                        className="mt-12 flex flex-col items-center justify-center gap-2 md:flex-row">
+                        <div
+                            key={1}
+                            className="bg-foreground/10 rounded-[14px] border p-0.5">
+                            <Button
+                                asChild
+                                size="lg"
+                                className="rounded-xl px-5 text-base">
+                                <Link href="#messages">
+                                    <span className="text-nowrap">Latest Messages</span>
+                                </Link>
+                            </Button>
+                        </div>
+                        <Button
+                            key={2}
+                            asChild
+                            size="lg"
+                            variant="ghost"
+                            className="h-10.5 rounded-xl px-5">
+                            <Link href="#about">
+                                <span className="text-nowrap">Our Mission</span>
+                            </Link>
+                        </Button>
+                    </AnimatedGroup>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
   );
 }

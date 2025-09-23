@@ -1,86 +1,95 @@
 "use client";
 
 import Link from "next/link";
-import { Menu, Sprout } from "lucide-react";
-import {
-  Sheet,
-  SheetContent,
-  SheetTrigger,
-  SheetClose,
-} from "@/components/ui/sheet";
+import React from 'react';
+import { Menu, Sprout, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 const navLinks = [
-  { href: "#about", label: "About" },
-  { href: "#messages", label: "Messages" },
-  { href: "#insights", label: "Insights" },
-  { href: "#testimonials", label: "Testimonials" },
+    { label: "About", href: "#about" },
+    { label: "Messages", href: "#messages" },
+    { label: "Insights", href: "#insights" },
+    { label: "Testimonials", href: "#testimonials" },
 ];
 
 export function Header() {
+    const [menuState, setMenuState] = React.useState(false)
+    const [isScrolled, setIsScrolled] = React.useState(false)
+
+    React.useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 50)
+        }
+        window.addEventListener('scroll', handleScroll)
+        return () => window.removeEventListener('scroll', handleScroll)
+    }, [])
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 max-w-screen-xl items-center px-4 sm:px-6 lg:px-8">
-        <div className="mr-6 flex items-center">
-          <Link href="/" className="flex items-center space-x-2">
-            <Sprout className="h-6 w-6 text-primary" />
-            <span className="font-headline text-xl font-bold text-primary">
-              Divine Canvas
-            </span>
-          </Link>
-        </div>
+    <header>
+            <nav
+                data-state={menuState ? 'active' : 'inactive'}
+                className="fixed z-20 w-full px-2 group">
+                <div className={cn('mx-auto mt-2 max-w-6xl px-6 transition-all duration-300 lg:px-12', isScrolled && 'bg-background/50 max-w-4xl rounded-2xl border backdrop-blur-lg lg:px-5')}>
+                    <div className="relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4">
+                        <div className="flex w-full justify-between lg:w-auto">
+                            <Link href="/" className="flex items-center space-x-2">
+                                <Sprout className="h-6 w-6 text-primary" />
+                                <span className="font-headline text-xl font-bold text-primary">
+                                Divine Canvas
+                                </span>
+                            </Link>
 
-        <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="text-foreground/80 transition-colors hover:text-primary"
-            >
-              {link.label}
-            </Link>
-          ))}
-        </nav>
+                            <button
+                                onClick={() => setMenuState(!menuState)}
+                                aria-label={menuState == true ? 'Close Menu' : 'Open Menu'}
+                                className="relative z-20 -m-2.5 -mr-4 block cursor-pointer p-2.5 lg:hidden">
+                                <Menu className="in-data-[state=active]:rotate-180 group-data-[state=active]:scale-0 group-data-[state=active]:opacity-0 m-auto size-6 duration-200" />
+                                <X className="group-data-[state=active]:rotate-0 group-data-[state=active]:scale-100 group-data-[state=active]:opacity-100 absolute inset-0 m-auto size-6 -rotate-180 scale-0 opacity-0 duration-200" />
+                            </button>
+                        </div>
 
-        <div className="flex flex-1 items-center justify-end gap-4">
-          <Sheet>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="md:hidden">
-                <Menu className="h-6 w-6" />
-                <span className="sr-only">Toggle Menu</span>
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="left" className="w-[300px] sm:w-[400px]">
-              <nav className="flex flex-col space-y-4 p-6">
-                <SheetClose asChild>
-                  <Link href="/" className="mb-6 flex items-center space-x-2">
-                    <Sprout className="h-8 w-8 text-primary" />
-                    <span className="font-headline text-2xl font-bold text-primary">
-                      Divine Canvas
-                    </span>
-                  </Link>
-                </SheetClose>
-                {navLinks.map((link) => (
-                  <SheetClose asChild key={link.href}>
-                    <Link
-                      href={link.href}
-                      className="text-lg font-medium transition-colors hover:text-primary"
-                    >
-                      {link.label}
-                    </Link>
-                  </SheetClose>
-                ))}
-              </nav>
-            </SheetContent>
-          </Sheet>
+                        <div className="absolute inset-0 m-auto hidden size-fit lg:block">
+                            <ul className="flex gap-8 text-sm">
+                                {navLinks.map((item, index) => (
+                                    <li key={index}>
+                                        <Link
+                                            href={item.href}
+                                            className="text-muted-foreground hover:text-primary block duration-150">
+                                            <span>{item.label}</span>
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
 
-           <div className="hidden md:flex">
-             <Button asChild>
-                <Link href="#contact">Get In Touch</Link>
-             </Button>
-           </div>
-        </div>
-      </div>
-    </header>
+                        <div className="bg-background group-data-[state=active]:block lg:group-data-[state=active]:flex mb-6 hidden w-full flex-wrap items-center justify-end space-y-8 rounded-3xl border p-6 shadow-2xl shadow-zinc-300/20 md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none dark:shadow-none dark:lg:bg-transparent">
+                            <div className="lg:hidden">
+                                <ul className="space-y-6 text-base">
+                                    {navLinks.map((item, index) => (
+                                        <li key={index}>
+                                            <Link
+                                                href={item.href}
+                                                className="text-muted-foreground hover:text-primary block duration-150">
+                                                <span>{item.label}</span>
+                                            </Link>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                            <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
+                                <Button
+                                    asChild
+                                    size="sm"
+                                >
+                                    <Link href="#contact">
+                                        <span>Get In Touch</span>
+                                    </Link>
+                                </Button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
   );
 }
