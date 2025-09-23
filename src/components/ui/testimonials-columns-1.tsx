@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const testimonials = [
   {
@@ -40,13 +41,10 @@ export const TestimonialsColumn = (props: {
                 >
                   <div className="text-foreground/90 text-lg">{text}</div>
                   <div className="flex items-center gap-4 mt-6">
-                    <img
-                      width={48}
-                      height={48}
-                      src={image}
-                      alt={name}
-                      className="h-12 w-12 rounded-full"
-                    />
+                    <Avatar>
+                        <AvatarImage src={image} alt={name} />
+                        <AvatarFallback>{name.charAt(0)}</AvatarFallback>
+                    </Avatar>
                     <div className="flex flex-col">
                       <div className="font-medium tracking-tight leading-5 text-foreground">
                         {name}
