@@ -31,9 +31,13 @@ export function Hero() {
     <section className="py-16 sm:py-24 lg:py-32">
         <div className="relative">
              <div className="absolute inset-0 -z-20 h-full w-full overflow-hidden">
+                {/* 
+                  To use a video from an external URL, replace the `src` below with your video URL.
+                  Example: src="https://cdn.pixabay.com/video/2024/05/20/212625_large.mp4"
+                */}
                 <video
                     className="absolute min-h-full min-w-full object-cover"
-                    src="https://cdn.pixabay.com/video/2024/05/20/212625_large.mp4"
+                    src="/assets/hero-background.mp4"
                     autoPlay
                     muted
                     loop
