@@ -17,12 +17,12 @@ const footerNav = [
 export function Footer() {
   return (
     <footer id="contact" className="border-t border-border/40 bg-card">
-      <div className="container mx-auto max-w-screen-2xl px-4">
-        <div className="grid grid-cols-1 gap-8 py-12 md:grid-cols-3">
+      <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 gap-8 py-16 md:grid-cols-3">
           <div className="flex flex-col items-start">
             <Link href="/" className="mb-4 flex items-center space-x-2">
               <Sprout className="h-8 w-8 text-primary" />
-              <span className="font-headline text-h2 font-bold text-primary">
+              <span className="font-headline text-2xl font-bold text-primary">
                 Divine Canvas
               </span>
             </Link>
@@ -31,8 +31,8 @@ export function Footer() {
             </p>
           </div>
           <div className="md:justify-self-center">
-            <h3 className="mb-4 text-h3 font-semibold text-foreground">Explore</h3>
-            <ul className="space-y-2">
+            <h3 className="mb-4 text-xl font-semibold text-foreground">Explore</h3>
+            <ul className="space-y-3">
               {footerNav.map((item) => (
                 <li key={item.href}>
                   <Link
@@ -46,7 +46,7 @@ export function Footer() {
             </ul>
           </div>
           <div className="md:justify-self-end">
-             <h3 className="mb-4 text-h3 font-semibold text-foreground">Connect With Us</h3>
+             <h3 className="mb-4 text-xl font-semibold text-foreground">Connect With Us</h3>
             <div className="flex space-x-4">
               {socialLinks.map((social) => (
                 <Link
@@ -62,7 +62,7 @@ export function Footer() {
              <p className="mt-4 text-muted-foreground">contact@divinecanvas.org</p>
           </div>
         </div>
-        <div className="border-t border-border/40 py-6 text-center text-sm text-muted-foreground">
+        <div className="border-t border-border/40 py-8 text-center text-sm text-muted-foreground">
           <p>
             &copy; {new Date().getFullYear()} Divine Canvas. All rights reserved.
           </p>

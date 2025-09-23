@@ -20,11 +20,11 @@ const navLinks = [
 export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-14 max-w-screen-2xl items-center">
-        <div className="mr-4 flex">
-          <Link href="/" className="mr-6 flex items-center space-x-2">
+      <div className="container flex h-16 max-w-screen-xl items-center px-4 sm:px-6 lg:px-8">
+        <div className="mr-6 flex items-center">
+          <Link href="/" className="flex items-center space-x-2">
             <Sprout className="h-6 w-6 text-primary" />
-            <span className="font-headline text-h3 font-bold text-primary">
+            <span className="font-headline text-xl font-bold text-primary">
               Divine Canvas
             </span>
           </Link>
@@ -35,14 +35,14 @@ export function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="transition-colors hover:text-primary"
+              className="text-foreground/80 transition-colors hover:text-primary"
             >
               {link.label}
             </Link>
           ))}
         </nav>
 
-        <div className="flex flex-1 items-center justify-end">
+        <div className="flex flex-1 items-center justify-end gap-4">
           <Sheet>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" className="md:hidden">
@@ -50,12 +50,12 @@ export function Header() {
                 <span className="sr-only">Toggle Menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="left">
-              <div className="flex flex-col space-y-4 p-4">
+            <SheetContent side="left" className="w-[300px] sm:w-[400px]">
+              <nav className="flex flex-col space-y-4 p-6">
                 <SheetClose asChild>
-                  <Link href="/" className="mb-4 flex items-center space-x-2">
-                    <Sprout className="h-6 w-6 text-primary" />
-                    <span className="font-headline text-h2 font-bold text-primary">
+                  <Link href="/" className="mb-6 flex items-center space-x-2">
+                    <Sprout className="h-8 w-8 text-primary" />
+                    <span className="font-headline text-2xl font-bold text-primary">
                       Divine Canvas
                     </span>
                   </Link>
@@ -70,7 +70,7 @@ export function Header() {
                     </Link>
                   </SheetClose>
                 ))}
-              </div>
+              </nav>
             </SheetContent>
           </Sheet>
 

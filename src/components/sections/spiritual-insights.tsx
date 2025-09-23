@@ -29,14 +29,14 @@ const insights = [
 
 export function SpiritualInsights() {
   return (
-    <section id="insights" className="w-full py-12 md:py-24 lg:py-32 bg-background">
+    <section id="insights" className="w-full py-16 sm:py-24 lg:py-32 bg-background">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
-          <div className="space-y-2">
-            <h2 className="text-h1 font-bold tracking-tighter text-primary">
+          <div className="space-y-4">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary">
               Spiritual Insights
             </h2>
-            <p className="max-w-[900px] text-muted-foreground text-body/relaxed">
+            <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed">
               Explore articles that delve deeper into scripture, offer practical wisdom, and encourage a closer walk with God.
             </p>
           </div>
@@ -45,7 +45,7 @@ export function SpiritualInsights() {
           {insights.map((insight) => {
             const image = PlaceHolderImages.find((img) => img.id === insight.id);
             return (
-              <Card key={insight.id} className="overflow-hidden flex flex-col group transition-all hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-2">
+              <Card key={insight.id} className="overflow-hidden flex flex-col group transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-2">
                 {image && (
                   <CardHeader className="p-0">
                     <Image
@@ -54,7 +54,7 @@ export function SpiritualInsights() {
                       data-ai-hint={image.imageHint}
                       width={600}
                       height={400}
-                      className="w-full h-auto object-cover transition-transform group-hover:scale-105"
+                      className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
                     />
                   </CardHeader>
                 )}
@@ -63,10 +63,10 @@ export function SpiritualInsights() {
                     <Badge variant="outline">{insight.category}</Badge>
                     <span>{insight.readingTime}</span>
                   </div>
-                  <CardTitle className="text-h3 font-bold">{insight.title}</CardTitle>
+                  <CardTitle className="text-xl font-bold">{insight.title}</CardTitle>
                 </CardContent>
-                <CardFooter>
-                  <Button variant="ghost" asChild className="text-primary hover:text-primary/80">
+                <CardFooter className="p-6 pt-0">
+                  <Button variant="ghost" asChild className="text-primary hover:text-primary/80 p-0">
                     <Link href="#" className="flex items-center">
                       Read More <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>

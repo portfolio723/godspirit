@@ -8,24 +8,17 @@ export default {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    container: {
+      center: true,
+      padding: '2rem',
+      screens: {
+        '2xl': '1400px',
+      },
+    },
     extend: {
-      fontSize: {
-        hero: 'clamp(2.5rem, 6vw, 4rem)',
-        h1: 'clamp(2rem, 5vw, 3rem)',
-        h2: 'clamp(1.5rem, 4vw, 2.25rem)',
-        h3: 'clamp(1.25rem, 3vw, 1.75rem)',
-        body: 'clamp(1rem, 2.5vw, 1.125rem)',
-        sm: '0.875rem',
-      },
-      lineHeight: {
-        tight: '1.2',
-        normal: '1.5',
-        relaxed: '1.75',
-      },
       fontFamily: {
-        body: ['Inter', 'sans-serif'],
-        headline: ["'Playfair Display'", 'serif'],
-        code: ['monospace'],
+        body: ['var(--font-inter)'],
+        headline: ['var(--font-playfair-display)'],
       },
       colors: {
         background: 'hsl(var(--background))',
@@ -61,23 +54,6 @@ export default {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
-        chart: {
-          '1': 'hsl(var(--chart-1))',
-          '2': 'hsl(var(--chart-2))',
-          '3': 'hsl(var(--chart-3))',
-          '4': 'hsl(var(--chart-4))',
-          '5': 'hsl(var(--chart-5))',
-        },
-        sidebar: {
-          DEFAULT: 'hsl(var(--sidebar-background))',
-          foreground: 'hsl(var(--sidebar-foreground))',
-          primary: 'hsl(var(--sidebar-primary))',
-          'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-          accent: 'hsl(var(--sidebar-accent))',
-          'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-          border: 'hsl(var(--sidebar-border))',
-          ring: 'hsl(var(--sidebar-ring))',
-        },
       },
       borderRadius: {
         lg: 'var(--radius)',
