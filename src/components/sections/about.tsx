@@ -10,7 +10,7 @@ import {
 import { motion, useReducedMotion } from 'framer-motion';
 import { FeatureCard } from '@/components/ui/grid-feature-cards';
 
-const features = [
+const foundationFeatures = [
   {
     title: 'Personal Calling',
     icon: Heart,
@@ -26,6 +26,9 @@ const features = [
     icon: BookOpen,
     description: 'Grounded in biblically-sound teaching to build a strong foundation for your faith.',
   },
+];
+
+const focusFeatures = [
   {
     title: 'Divine Prosperity',
     icon: Crown,
@@ -46,7 +49,7 @@ const features = [
 export function About() {
   return (
     <section id="about" className="w-full py-16 sm:py-24 lg:py-32 bg-card">
-      <div className="mx-auto w-full max-w-5xl space-y-12 px-4">
+      <div className="mx-auto w-full max-w-5xl space-y-16 px-4">
         <AnimatedContainer className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-bold tracking-wide text-balance md:text-4xl lg:text-5xl xl:font-extrabold text-primary">
             About The Ministry
@@ -56,14 +59,29 @@ export function About() {
           </p>
         </AnimatedContainer>
 
-        <AnimatedContainer
-          delay={0.4}
-          className="grid grid-cols-1 divide-x divide-y divide-border/40 divide-dashed border border-dashed border-border/40 sm:grid-cols-2 md:grid-cols-3"
-        >
-          {features.map((feature, i) => (
-            <FeatureCard key={i} feature={feature} />
-          ))}
-        </AnimatedContainer>
+        <div className="space-y-16">
+          <AnimatedContainer delay={0.2} className="space-y-8">
+            <h3 className="text-2xl md:text-3xl font-semibold text-center text-primary/90">Our Foundation</h3>
+            <div
+              className="grid grid-cols-1 divide-x divide-y divide-border/40 divide-dashed border border-dashed border-border/40 sm:grid-cols-2 md:grid-cols-3"
+            >
+              {foundationFeatures.map((feature, i) => (
+                <FeatureCard key={i} feature={feature} />
+              ))}
+            </div>
+          </AnimatedContainer>
+          
+          <AnimatedContainer delay={0.4} className="space-y-8">
+             <h3 className="text-2xl md:text-3xl font-semibold text-center text-primary/90">Our Focus</h3>
+            <div
+              className="grid grid-cols-1 divide-x divide-y divide-border/40 divide-dashed border border-dashed border-border/40 sm:grid-cols-2 md:grid-cols-3"
+            >
+              {focusFeatures.map((feature, i) => (
+                <FeatureCard key={i} feature={feature} />
+              ))}
+            </div>
+          </AnimatedContainer>
+        </div>
       </div>
     </section>
   );
