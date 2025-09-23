@@ -75,12 +75,8 @@ export function Hero() {
                         <h1
                             className="hero-title mt-8 max-w-4xl mx-auto text-balance text-foreground">
                             "She prospers in all that she does"
+                            <span className="scripture-quote text-accent ml-4">- Psalms 1:3</span>
                         </h1>
-                        <div className="max-w-4xl mx-auto">
-                            <p className="scripture-quote mt-6 text-accent text-right pr-8">
-                                Psalms 1:3
-                            </p>
-                        </div>
                         <p
                             className="mx-auto mt-8 max-w-2xl text-balance text-lg text-foreground/80">
                             Welcome to a space of spiritual nourishment and divine encounter. Discover messages that inspire, insights that enlighten, and a community that uplifts.
