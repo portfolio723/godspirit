@@ -3,18 +3,16 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
-const testimonials = [
-  {
-    text: "This ERP revolutionized our operations, streamlining finance and inventory. The cloud-based platform keeps us productive, even remotely.",
-    image: "https://randomuser.me/api/portraits/women/1.jpg",
-    name: "Briana Patton",
-    role: "Operations Manager",
-  },
-];
+type Testimonial = {
+    text: string;
+    image: string;
+    name: string;
+    role: string;
+};
 
 export const TestimonialsColumn = (props: {
   className?: string;
-  testimonials: typeof testimonials;
+  testimonials: Testimonial[];
   duration?: number;
 }) => {
   return (
@@ -29,7 +27,7 @@ export const TestimonialsColumn = (props: {
           ease: "linear",
           repeatType: "loop",
         }}
-        className="flex flex-col gap-8 pb-8 bg-transparent"
+        className="flex flex-col gap-8 pb-8"
       >
         {[
           ...new Array(2).fill(0).map((_, index) => (

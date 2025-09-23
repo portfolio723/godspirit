@@ -44,6 +44,24 @@ const testimonials = [
     role: "Sydney, Australia",
     text: "The daily insights are a constant source of encouragement. They are bite-sized truths that I can carry with me throughout the day.",
   },
+    {
+    avatarId: "testimonial-avatar-7",
+    name: "Aisha B.",
+    role: "Nairobi, Kenya",
+    text: "The prayer sessions are so powerful. I've seen answers to prayers that have been on my heart for years. Truly life-changing!",
+  },
+  {
+    avatarId: "testimonial-avatar-8",
+    name: "Michael P.",
+    role: "Toronto, Canada",
+    text: "This ministry has been a safe haven for me. The love and support from the community is unlike anything I've experienced before.",
+  },
+  {
+    avatarId: "testimonial-avatar-9",
+    name: "Isabella T.",
+    role: "Rome, Italy",
+    text: "The teachings on identity have been revolutionary for me. I now walk in confidence, knowing who I am in Christ.",
+  },
 ];
 
 const enrichedTestimonials = testimonials.map(testimonial => {
@@ -51,9 +69,9 @@ const enrichedTestimonials = testimonials.map(testimonial => {
     return { ...testimonial, image: image?.imageUrl || '' };
 });
 
-const firstColumn = enrichedTestimonials.slice(0, 2);
-const secondColumn = enrichedTestimonials.slice(2, 4);
-const thirdColumn = enrichedTestimonials.slice(4, 6);
+const firstColumn = enrichedTestimonials.slice(0, 3);
+const secondColumn = enrichedTestimonials.slice(3, 6);
+const thirdColumn = enrichedTestimonials.slice(6, 9);
 
 export function Testimonials() {
   return (

@@ -55,6 +55,18 @@
       "imageHint": "hope storm"
     },
     {
+      "id": "insight-post-6",
+      "description": "Image for a blog post about worship.",
+      "imageUrl": "https://images.unsplash.com/photo-1519894285-618451813123?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxmb3JnaXZlbmVzcyUyMGxpZ2h0fGVufDB8fHx8MTc1ODkwNDg4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "worship music"
+    },
+    {
+      "id": "insight-post-7",
+      "description": "Image for a blog post about hearing God's voice.",
+      "imageUrl": "https://images.unsplash.com/photo-1620456044732-23542a3a5518?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxob3BlJTIwc3Rvcm18ZW58MHx8fHwxNzU4OTA0ODg0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "discernment light"
+    },
+    {
       "id": "testimonial-avatar-1",
       "description": "Avatar for a person named Sarah L.",
       "imageUrl": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMHdvbWFufGVufDB8fHx8MTc1ODk3OTMzM3ww&ixlib=rb-4.1.0&q=80&w=1080",
@@ -89,6 +101,24 @@
       "description": "Avatar for a person named Samuel R.",
       "imageUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxwcm90cmFpdCUyMG1hbnxlbnwwfHx8fDE3NTg5NzkzMzN8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "portrait man"
+    },
+    {
+      "id": "testimonial-avatar-7",
+      "description": "Avatar for a person named Aisha B.",
+      "imageUrl": "https://images.unsplash.com/photo-1580489944761-15a19d654956?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxwb3J0cmFpdCUyMHdvbWFufGVufDB8fHx8MTc1ODk3OTMzM3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "portrait woman"
+    },
+    {
+      "id": "testimonial-avatar-8",
+      "description": "Avatar for a person named Michael P.",
+      "imageUrl": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxwcm90cmFpdCUyMG1hbnxlbnwwfHx8fDE3NTg5NzkzMzN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "portrait man"
+    },
+    {
+      "id": "testimonial-avatar-9",
+      "description": "Avatar for a person named Isabella T.",
+      "imageUrl": "https://images.unsplash.com/photo-1601412436009-d96440274246?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxwb3J0cmFpdCUyMHdvbWFufGVufDB8fHx8MTc1ODk3OTMzM3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "portrait woman"
     }
   ]
 }
