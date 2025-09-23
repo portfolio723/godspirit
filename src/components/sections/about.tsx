@@ -46,12 +46,12 @@ const features = [
 export function About() {
   return (
     <section id="about" className="w-full py-16 sm:py-24 lg:py-32 bg-card">
-      <div className="mx-auto w-full max-w-5xl space-y-8 px-4">
+      <div className="mx-auto w-full max-w-5xl space-y-12 px-4">
         <AnimatedContainer className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-bold tracking-wide text-balance md:text-4xl lg:text-5xl xl:font-extrabold text-primary">
             Our Calling & Core Beliefs
           </h2>
-          <p className="text-muted-foreground mt-4 text-sm tracking-wide text-balance md:text-base">
+          <p className="text-muted-foreground mt-6 text-base tracking-wide text-balance md:text-lg">
             To empower believers to walk in the fullness of their God-given identity and prosper in every area of their lives through biblically-sound teaching, prophetic insight, and heartfelt prayer.
           </p>
         </AnimatedContainer>

@@ -81,8 +81,8 @@ export function SpiritualInsights() {
   return (
     <section id="insights" className="py-16 sm:py-24 lg:py-32 bg-card">
       <div className="container mx-auto">
-        <div className="mb-8 flex items-end justify-between md:mb-14 lg:mb-16">
-          <div className="flex flex-col gap-4">
+        <div className="mb-12 flex items-end justify-between">
+          <div className="flex flex-col gap-6">
             <h2 className="text-3xl font-medium md:text-4xl lg:text-5xl text-primary">
               Spiritual Insights
             </h2>
@@ -129,7 +129,7 @@ export function SpiritualInsights() {
             {items.map((item) => (
               <CarouselItem
                 key={item.id}
-                className="max-w-[320px] pl-[20px] lg:max-w-[360px]"
+                className="max-w-[320px] pl-5 lg:max-w-[360px]"
               >
                 <a href={item.href} className="group">
                   <div className="group relative h-full min-h-[27rem] max-w-full overflow-hidden md:aspect-[5/4] lg:aspect-[16/9]">

@@ -29,8 +29,8 @@ export function Hero() {
   const heroImage = PlaceHolderImages.find((img) => img.id === "hero-background");
 
   return (
-    <section>
-        <div className="relative pt-24 md:pt-36">
+    <section className="py-16 sm:py-24 lg:py-32">
+        <div className="relative">
             <AnimatedGroup
                 variants={{
                     container: {
@@ -76,7 +76,7 @@ export function Hero() {
                             className="hero-title mt-8 max-w-4xl mx-auto text-balance text-foreground">
                             "She prospers in all that she does"
                         </h1>
-                        <p className="scripture-quote mt-4 text-accent">
+                        <p className="scripture-quote mt-6 text-accent">
                             Psalms 1:3
                         </p>
                         <p
@@ -97,7 +97,7 @@ export function Hero() {
                             },
                             ...transitionVariants,
                         }}
-                        className="mt-12 flex flex-col items-center justify-center gap-2 md:flex-row">
+                        className="mt-12 flex flex-col items-center justify-center gap-4 md:flex-row">
                         
                             <Button
                                 asChild

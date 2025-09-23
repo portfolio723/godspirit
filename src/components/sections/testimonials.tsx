@@ -57,7 +57,7 @@ const thirdColumn = enrichedTestimonials.slice(4, 6);
 
 export function Testimonials() {
   return (
-    <section id="testimonials" className="bg-background my-20 relative">
+    <section id="testimonials" className="bg-background relative py-16 sm:py-24 lg:py-32">
       <div className="container z-10 mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -66,16 +66,16 @@ export function Testimonials() {
           viewport={{ once: true }}
           className="flex flex-col items-center justify-center max-w-[540px] mx-auto text-center"
         >
-          <Badge variant="outline" className="border-accent text-accent">Testimonials</Badge>
+          <Badge variant="outline" className="border-accent text-accent mb-6">Testimonials</Badge>
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold tracking-tighter mt-5">
             Lives Touched by the Spirit
           </h2>
-          <p className="text-center mt-5 opacity-75">
+          <p className="text-center mt-6 opacity-75">
             Discover the transformative power of faith through the stories of our community members.
           </p>
         </motion.div>
 
-        <div className="flex justify-center gap-6 mt-10 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] max-h-[740px] overflow-hidden">
+        <div className="flex justify-center gap-8 mt-12 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] max-h-[740px] overflow-hidden">
           <TestimonialsColumn testimonials={firstColumn} duration={15} />
           <TestimonialsColumn
             testimonials={secondColumn}
