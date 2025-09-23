@@ -35,6 +35,20 @@ const insights = [
       "A guide to discovering your unique calling. Learn how to identify your spiritual gifts and align your life with God's plan.",
     href: "#",
   },
+  {
+    id: "insight-post-4",
+    title: "The Power of Forgiveness",
+    description:
+      "Learn about the freedom and healing that comes from forgiveness, and how to apply it in your life.",
+    href: "#",
+  },
+  {
+    id: "insight-post-5",
+    title: "Navigating Life's Storms",
+    description:
+      "Find strength and hope in God's promises when facing the trials and tribulations of life.",
+    href: "#",
+  },
 ];
 
 const items = insights.map((insight) => {
@@ -107,11 +121,8 @@ export function SpiritualInsights() {
         <Carousel
           setApi={setCarouselApi}
           opts={{
-            breakpoints: {
-              "(max-width: 768px)": {
-                dragFree: true,
-              },
-            },
+            align: "start",
+            loop: true,
           }}
         >
           <CarouselContent className="ml-0 2xl:ml-[max(8rem,calc(50vw-700px))] 2xl:mr-[max(0rem,calc(50vw-700px))]">
