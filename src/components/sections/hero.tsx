@@ -78,7 +78,7 @@ export function Hero() {
                             <span className="scripture-quote text-accent ml-4">- Psalms 1:3</span>
                         </h1>
                         <p
-                            className="mx-auto mt-8 max-w-2xl text-balance text-lg text-foreground/80">
+                            className="mx-auto mt-8 max-w-4xl text-balance text-lg text-foreground/80">
                             Welcome to a space of spiritual nourishment and divine encounter. Discover messages that inspire, insights that enlighten, and a community that uplifts.
                         </p>
                     </AnimatedGroup>
