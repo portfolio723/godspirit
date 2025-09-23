@@ -3,6 +3,7 @@
 import * as React from "react";
 import { cn } from "@/lib/utils";
 import { Play, X } from "lucide-react";
+import Image from "next/image";
 
 // Interface for component props
 interface VideoPlayerProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -10,8 +11,6 @@ interface VideoPlayerProps extends React.HTMLAttributes<HTMLDivElement> {
   videoUrl: string;
   title: string;
   description?: string;
-  aspectRatio?: "16/9" | "4/3" | "1/1";
-  category?: string;
 }
 
 const VideoPlayer = React.forwardRef<HTMLDivElement, VideoPlayerProps>(
@@ -22,8 +21,6 @@ const VideoPlayer = React.forwardRef<HTMLDivElement, VideoPlayerProps>(
       videoUrl,
       title,
       description,
-      aspectRatio = "16/9",
-      category,
       ...props
     },
     ref
@@ -70,9 +67,10 @@ const VideoPlayer = React.forwardRef<HTMLDivElement, VideoPlayerProps>(
           {...props}
         >
           {/* Thumbnail Image */}
-          <img
+          <Image
             src={thumbnailUrl}
             alt={`Thumbnail for ${title}`}
+            fill
             className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
           />
           {/* Overlay Gradient */}
@@ -87,7 +85,7 @@ const VideoPlayer = React.forwardRef<HTMLDivElement, VideoPlayerProps>(
 
           {/* Title and Description */}
           <div className="absolute bottom-0 left-0 p-6">
-            <h3 className="text-xl font-semibold text-white font-body">{title}</h3>
+            <h3 className="text-xl font-body font-semibold text-white">{title}</h3>
             {description && (
               <p className="mt-1 text-sm text-white/80">{description}</p>
             )}

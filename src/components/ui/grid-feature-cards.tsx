@@ -1,5 +1,5 @@
 import { cn } from '@/lib/utils';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 type FeatureType = {
 	title: string;
@@ -11,8 +11,23 @@ type FeatureCardPorps = React.ComponentProps<'div'> & {
 	feature: FeatureType;
 };
 
+function useRandomPattern(length: number = 5): number[][] {
+    const [pattern, setPattern] = useState<number[][]>([]);
+
+    useEffect(() => {
+        const newPattern = Array.from({ length }, () => [
+            Math.floor(Math.random() * 4) + 7, // random x between 7 and 10
+            Math.floor(Math.random() * 6) + 1, // random y between 1 and 6
+        ]);
+        setPattern(newPattern)
+    }, [length]);
+
+	return pattern;
+}
+
+
 export function FeatureCard({ feature, className, ...props }: FeatureCardPorps) {
-	const p = genRandomPattern();
+	const p = useRandomPattern();
 
 	return (
 		<div className={cn('relative overflow-hidden p-8', className)} {...props}>
@@ -68,19 +83,4 @@ function GridPattern({
 			)}
 		</svg>
 	);
-}
-
-function genRandomPattern(length?: number): number[][] {
-    const [randomNumber, setRandomNumber] = React.useState<number[][]>([]);
-
-    React.useEffect(() => {
-        length = length ?? 5;
-        const newPattern = Array.from({ length }, () => [
-            Math.floor(Math.random() * 4) + 7, // random x between 7 and 10
-            Math.floor(Math.random() * 6) + 1, // random y between 1 and 6
-        ]);
-        setRandomNumber(newPattern)
-    }, [length]);
-
-	return randomNumber;
 }

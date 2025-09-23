@@ -3,6 +3,7 @@ import React from 'react';
 import type { ComponentProps, ReactNode } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 import { Crown, Twitter, Facebook, Instagram, Youtube } from "lucide-react";
+import Link from 'next/link';
 
 interface FooterLink {
  	title: string;
@@ -56,12 +57,12 @@ export function Footer() {
  			<div className="grid w-full gap-8 xl:grid-cols-3 xl:gap-8 p-12 lg:p-16">
  				<AnimatedContainer className="space-y-4">
                     <div className="flex flex-col items-start">
-                        <a href="/" className="mb-4 flex items-center space-x-2">
+                        <Link href="/" className="mb-4 flex items-center space-x-2">
                         <Crown className="h-8 w-8 text-accent" />
                         <span className="font-headline text-2xl font-bold text-primary">
                             God Spirit Says
                         </span>
-                        </a>
+                        </Link>
                         <p className="text-muted-foreground">
                             Guiding souls towards divine prosperity and purpose.
                         </p>

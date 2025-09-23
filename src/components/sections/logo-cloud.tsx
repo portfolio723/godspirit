@@ -1,15 +1,16 @@
 import Link from 'next/link'
 import { ChevronRight } from 'lucide-react'
+import Image from 'next/image';
 
 const logos = [
-    { src: "https://html.tailus.io/blocks/customers/nvidia.svg", alt: "Nvidia Logo", height: "h-5" },
-    { src: "https://html.tailus.io/blocks/customers/column.svg", alt: "Column Logo", height: "h-4" },
-    { src: "https://html.tailus.io/blocks/customers/github.svg", alt: "GitHub Logo", height: "h-4" },
-    { src: "https://html.tailus.io/blocks/customers/nike.svg", alt: "Nike Logo", height: "h-5" },
-    { src: "https://html.tailus.io/blocks/customers/lemonsqueezy.svg", alt: "Lemon Squeezy Logo", height: "h-5" },
-    { src: "https://html.tailus.io/blocks/customers/laravel.svg", alt: "Laravel Logo", height: "h-4" },
-    { src: "https://html.tailus.io/blocks/customers/lilly.svg", alt: "Lilly Logo", height: "h-7" },
-    { src: "https://html.tailus.io/blocks/customers/openai.svg", alt: "OpenAI Logo", height: "h-6" },
+    { src: "https://html.tailus.io/blocks/customers/nvidia.svg", alt: "Nvidia Logo", width: 90, height: 20 },
+    { src: "https://html.tailus.io/blocks/customers/column.svg", alt: "Column Logo", width: 90, height: 16 },
+    { src: "https://html.tailus.io/blocks/customers/github.svg", alt: "GitHub Logo", width: 90, height: 16 },
+    { src: "https://html.tailus.io/blocks/customers/nike.svg", alt: "Nike Logo", width: 90, height: 20 },
+    { src: "https://html.tailus.io/blocks/customers/lemonsqueezy.svg", alt: "Lemon Squeezy Logo", width: 90, height: 20 },
+    { src: "https://html.tailus.io/blocks/customers/laravel.svg", alt: "Laravel Logo", width: 90, height: 16 },
+    { src: "https://html.tailus.io/blocks/customers/lilly.svg", alt: "Lilly Logo", width: 90, height: 28 },
+    { src: "https://html.tailus.io/blocks/customers/openai.svg", alt: "OpenAI Logo", width: 90, height: 24 },
 ];
 
 export function LogoCloud() {
@@ -27,12 +28,13 @@ export function LogoCloud() {
                 </div>
                 <div className="group-hover:blur-xs mx-auto mt-12 grid max-w-2xl grid-cols-4 gap-x-12 gap-y-12 transition-all duration-500 group-hover:opacity-50 sm:gap-x-16 sm:gap-y-14">
                     {logos.map((logo, index) => (
-                        <div key={index} className="flex">
-                            <img
-                                className={`mx-auto w-fit dark:invert ${logo.height}`}
+                        <div key={index} className="flex justify-center">
+                            <Image
+                                className="mx-auto w-fit dark:invert"
                                 src={logo.src}
                                 alt={logo.alt}
-                                width="auto"
+                                width={logo.width}
+                                height={logo.height}
                             />
                         </div>
                     ))}
