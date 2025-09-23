@@ -30,17 +30,15 @@ export function LatestMessages() {
   return (
     <section id="messages" className="w-full py-16 sm:py-24 lg:py-32 bg-card">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="flex flex-col items-center justify-center space-y-4 text-center">
-          <div className="space-y-4">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary">
-              Latest Messages
-            </h2>
-            <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed">
-              Dive into our recent teachings, prophetic words, and prayer sessions. Be blessed, encouraged, and transformed by the Word of God.
-            </p>
-          </div>
+        <div className="mb-12 space-y-4 text-center">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary">
+            Latest Messages
+          </h2>
+          <p className="max-w-3xl mx-auto text-muted-foreground md:text-xl/relaxed">
+            Dive into our recent teachings, prophetic words, and prayer sessions. Be blessed, encouraged, and transformed by the Word of God.
+          </p>
         </div>
-        <div className="mx-auto grid grid-cols-1 gap-8 pt-12 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {messages.map((message) => {
             const image = PlaceHolderImages.find((img) => img.id === message.id);
             return (

@@ -31,17 +31,15 @@ export function SpiritualInsights() {
   return (
     <section id="insights" className="w-full py-16 sm:py-24 lg:py-32 bg-background">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="flex flex-col items-center justify-center space-y-4 text-center">
-          <div className="space-y-4">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary">
-              Spiritual Insights
-            </h2>
-            <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed">
-              Explore articles that delve deeper into scripture, offer practical wisdom, and encourage a closer walk with God.
-            </p>
-          </div>
+        <div className="mb-12 space-y-4 text-center">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary">
+            Spiritual Insights
+          </h2>
+          <p className="max-w-3xl mx-auto text-muted-foreground md:text-xl/relaxed">
+            Explore articles that delve deeper into scripture, offer practical wisdom, and encourage a closer walk with God.
+          </p>
         </div>
-        <div className="mx-auto grid grid-cols-1 gap-8 pt-12 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {insights.map((insight) => {
             const image = PlaceHolderImages.find((img) => img.id === insight.id);
             return (
