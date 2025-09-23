@@ -2,7 +2,7 @@
 import React from 'react';
 import type { ComponentProps, ReactNode } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
-import { Crown, Twitter, Facebook, Instagram, Youtube, Linkedin } from "lucide-react";
+import { Crown, Twitter, Facebook, Instagram, Youtube } from "lucide-react";
 
 interface FooterLink {
  	title: string;
@@ -40,12 +40,12 @@ const footerLinks: FooterSection[] = [
         ],
     },
  	{
- 		label: 'Social Links',
+ 		label: 'Social',
  		links: [
  			{ title: 'Twitter', href: '#', icon: Twitter },
  			{ title: 'Facebook', href: '#', icon: Facebook },
  			{ title: 'Instagram', href: '#', icon: Instagram },
- 			{ title: 'LinkedIn', href: '#', icon: Linkedin },
+ 			{ title: 'YouTube', href: '#', icon: Youtube },
  		],
  	},
 ];
@@ -59,7 +59,7 @@ export function Footer() {
                         <a href="/" className="mb-4 flex items-center space-x-2">
                         <Crown className="h-8 w-8 text-accent" />
                         <span className="font-headline text-2xl font-bold text-primary">
-                            God Spirit Says
+                            Divine Canvas
                         </span>
                         </a>
                         <p className="text-muted-foreground">
@@ -67,7 +67,7 @@ export function Footer() {
                         </p>
                     </div>
  					<p className="text-muted-foreground mt-8 text-sm md:mt-4">
- 						© {new Date().getFullYear()} God Spirit Says. All rights reserved.
+ 						© {new Date().getFullYear()} Divine Canvas. All rights reserved.
  					</p>
  				</AnimatedContainer>
 

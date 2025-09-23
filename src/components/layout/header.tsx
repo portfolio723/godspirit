@@ -35,7 +35,7 @@ export function Header() {
                             <Link href="/" className="flex items-center space-x-2">
                                 <Crown className="h-6 w-6 text-accent" />
                                 <span className="font-headline text-xl font-bold text-primary">
-                                God Spirit Says
+                                Divine Canvas
                                 </span>
                             </Link>
 

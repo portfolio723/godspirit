@@ -12,6 +12,7 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
+import { Badge } from "@/components/ui/badge";
 
 const insights = [
   {
@@ -20,6 +21,8 @@ const insights = [
     description:
       "Discover practical steps and biblical principles to deepen your relationship with God and foster spiritual maturity in your daily walk.",
     href: "#",
+    category: "Faith",
+    readingTime: 5,
   },
   {
     id: "insight-post-2",
@@ -27,6 +30,8 @@ const insights = [
     description:
       "Dive into the rich teachings of Jesus' parables. This study unveils hidden meanings and applies ancient wisdom to contemporary life.",
     href: "#",
+    category: "Scripture",
+    readingTime: 8,
   },
   {
     id: "insight-post-3",
@@ -34,6 +39,8 @@ const insights = [
     description:
       "A guide to discovering your unique calling. Learn how to identify your spiritual gifts and align your life with God's plan.",
     href: "#",
+    category: "Purpose",
+    readingTime: 6,
   },
   {
     id: "insight-post-4",
@@ -41,6 +48,8 @@ const insights = [
     description:
       "Learn about the freedom and healing that comes from forgiveness, and how to apply it in your life.",
     href: "#",
+    category: "Healing",
+    readingTime: 4,
   },
   {
     id: "insight-post-5",
@@ -48,18 +57,24 @@ const insights = [
     description:
       "Find strength and hope in God's promises when facing the trials and tribulations of life.",
     href: "#",
+    category: "Hope",
+    readingTime: 7,
   },
   {
       id: "insight-post-6",
       title: "The Heart of a Worshipper",
       description: "Explore what it truly means to worship God in spirit and in truth, beyond just music and songs.",
-      href: "#"
+      href: "#",
+      category: "Worship",
+      readingTime: 5,
   },
   {
       id: "insight-post-7",
       title: "Hearing the Voice of God",
       description: "Practical tips to discern God's voice from the noise of everyday life.",
-      href: "#"
+      href: "#",
+      category: "Discernment",
+      readingTime: 6,
   }
 ];
 
@@ -155,6 +170,10 @@ export function SpiritualInsights() {
                     )}
                     <div className="absolute inset-0 h-full bg-[linear-gradient(hsl(var(--primary)/0),hsl(var(--primary)/0.4),hsl(var(--primary)/0.8)_100%)] mix-blend-multiply" />
                     <div className="absolute inset-x-0 bottom-0 flex flex-col items-start p-6 text-primary-foreground md:p-8">
+                       <div className="flex items-center gap-2">
+                        <Badge variant="secondary" className="bg-accent/20 text-accent border-transparent">{item.category}</Badge>
+                        <span className="text-sm">{item.readingTime} min read</span>
+                       </div>
                       <div className="mb-2 pt-4 text-xl font-semibold md:mb-3 md:pt-4 lg:pt-4">
                         {item.title}
                       </div>

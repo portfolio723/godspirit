@@ -2,7 +2,7 @@
 import {
   BookOpen,
   Heart,
-  Lightbulb,
+  Target,
   Crown,
   UserCheck,
   Globe,
@@ -12,19 +12,19 @@ import { FeatureCard } from '@/components/ui/grid-feature-cards';
 
 const features = [
   {
+    title: 'Personal Calling',
+    icon: Heart,
+    description: 'Discover the personal story and divine calling that sparked the beginning of this ministry.',
+  },
+  {
+    title: 'Mission & Vision',
+    icon: Target,
+    description: 'Our mission is to equip believers to prosper in their spiritual walk and fulfill their God-given destiny.',
+  },
+  {
     title: 'Biblical Teaching',
     icon: BookOpen,
     description: 'Grounded in biblically-sound teaching to build a strong foundation for your faith.',
-  },
-  {
-    title: 'Prophetic Insight',
-    icon: Lightbulb,
-    description: 'Receive timely prophetic insight to help you navigate the seasons of your life with clarity.',
-  },
-  {
-    title: 'Heartfelt Prayer',
-    icon: Heart,
-    description: 'Experience the power of heartfelt prayer for breakthrough, healing, and restoration.',
   },
   {
     title: 'Divine Prosperity',
@@ -32,9 +32,9 @@ const features = [
     description: 'Learn to walk in the fullness of your God-given identity and prosper in every area.',
   },
   {
-    title: 'Walk in Your Calling',
+    title: 'Ministry Impact',
     icon: UserCheck,
-    description: 'Be empowered to discover and step into your unique, God-given purpose and calling.',
+    description: 'See the numbers and stories behind the lives being transformed across the globe.',
   },
   {
     title: 'Global Community',
@@ -49,7 +49,7 @@ export function About() {
       <div className="mx-auto w-full max-w-5xl space-y-12 px-4">
         <AnimatedContainer className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-bold tracking-wide text-balance md:text-4xl lg:text-5xl xl:font-extrabold text-primary">
-            Our Calling & Core Beliefs
+            About The Ministry
           </h2>
           <p className="text-muted-foreground mt-6 text-base tracking-wide text-balance md:text-lg">
             To empower believers to walk in the fullness of their God-given identity and prosper in every area of their lives through biblically-sound teaching, prophetic insight, and heartfelt prayer.
