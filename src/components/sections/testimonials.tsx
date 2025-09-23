@@ -2,11 +2,9 @@
 import React from "react";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { TestimonialsColumn } from "@/components/ui/testimonials-columns-1";
-import { motion } from "motion/react";
-import { Badge } from "@/components/ui/badge";
+import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { Star } from "lucide-react";
 
 const testimonials = [
   {
@@ -58,7 +56,7 @@ const thirdColumn = enrichedTestimonials.slice(4, 6);
 
 export function Testimonials() {
   return (
-    <section id="testimonials" className="w-full py-16 sm:py-24 lg:py-32 bg-card relative">
+    <section id="testimonials" className="bg-background my-20 relative">
       <div className="container z-10 mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -67,11 +65,12 @@ export function Testimonials() {
           viewport={{ once: true }}
           className="flex flex-col items-center justify-center max-w-[540px] mx-auto text-center"
         >
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary">
-            Lives Being Transformed
+          <div className="border py-1 px-4 rounded-lg">Testimonials</div>
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold tracking-tighter mt-5">
+            What our users say
           </h2>
-          <p className="mt-4 max-w-3xl mx-auto text-muted-foreground md:text-xl/relaxed">
-            Hear from some of the many people whose lives have been touched and changed by the power of God through this ministry.
+          <p className="text-center mt-5 opacity-75">
+            See what our customers have to say about us.
           </p>
         </motion.div>
 

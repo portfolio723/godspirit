@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 
 const testimonials = [
   {
@@ -28,14 +28,14 @@ export const TestimonialsColumn = (props: {
           ease: "linear",
           repeatType: "loop",
         }}
-        className="flex flex-col gap-6 pb-6 bg-card"
+        className="flex flex-col gap-6 pb-6 bg-background"
       >
         {[
           ...new Array(2).fill(0).map((_, index) => (
             <React.Fragment key={index}>
               {props.testimonials.map(({ text, image, name, role }, i) => (
                 <div
-                  className="p-10 rounded-3xl border shadow-lg bg-background shadow-primary/10 max-w-xs w-full"
+                  className="p-10 rounded-3xl border shadow-lg bg-card shadow-primary/10 max-w-xs w-full"
                   key={i}
                 >
                   <div className="text-foreground/90">{text}</div>
