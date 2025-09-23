@@ -42,7 +42,7 @@ export function LatestMessages() {
           {messages.map((message) => {
             const image = PlaceHolderImages.find((img) => img.id === message.id);
             return (
-              <Card key={message.id} className="overflow-hidden flex flex-col group transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-2">
+              <Card key={message.id} className="overflow-hidden flex flex-col group transition-all duration-300 hover:shadow-lg hover:shadow-primary/30 hover:-translate-y-1 hover:border-primary/50">
                 <CardHeader className="p-0 relative">
                   {image && (
                     <Image
@@ -57,13 +57,13 @@ export function LatestMessages() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
                    <Badge variant={message.category === 'Sermon' ? 'default' : 'secondary'} className="absolute top-4 right-4">{message.category}</Badge>
                 </CardHeader>
-                <CardContent className="flex-1 p-6 space-y-3">
-                  <CardTitle className="text-xl font-bold">{message.title}</CardTitle>
-                  <p className="text-muted-foreground">{message.description}</p>
+                <CardContent className="flex-1 p-6 space-y-2">
+                  <CardTitle className="text-xl font-bold leading-tight">{message.title}</CardTitle>
+                  <p className="text-muted-foreground text-sm">{message.description}</p>
                 </CardContent>
                 <CardFooter className="p-6 pt-0">
                   <Button className="w-full">
-                    <PlayCircle className="mr-2 h-4 w-4" />
+                    <PlayCircle className="mr-2 h-5 w-5" />
                     Watch Now
                   </Button>
                 </CardFooter>

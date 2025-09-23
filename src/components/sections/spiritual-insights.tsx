@@ -43,7 +43,7 @@ export function SpiritualInsights() {
           {insights.map((insight) => {
             const image = PlaceHolderImages.find((img) => img.id === insight.id);
             return (
-              <Card key={insight.id} className="overflow-hidden flex flex-col group transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-2">
+              <Card key={insight.id} className="overflow-hidden flex flex-col group transition-all duration-300 hover:shadow-lg hover:shadow-primary/30 hover:-translate-y-1 hover:border-primary/50">
                 {image && (
                   <CardHeader className="p-0">
                     <Image
@@ -56,15 +56,15 @@ export function SpiritualInsights() {
                     />
                   </CardHeader>
                 )}
-                <CardContent className="flex-1 p-6 space-y-4">
-                  <div className="flex items-center justify-between text-sm text-muted-foreground">
+                <CardContent className="flex-1 p-6 space-y-3">
+                  <div className="flex items-center justify-between text-xs text-muted-foreground">
                     <Badge variant="outline">{insight.category}</Badge>
                     <span>{insight.readingTime}</span>
                   </div>
-                  <CardTitle className="text-xl font-bold">{insight.title}</CardTitle>
+                  <CardTitle className="text-xl font-bold leading-tight">{insight.title}</CardTitle>
                 </CardContent>
                 <CardFooter className="p-6 pt-0">
-                  <Button variant="ghost" asChild className="text-primary hover:text-primary/80 p-0">
+                  <Button variant="link" asChild className="text-primary hover:text-primary/80 p-0 font-semibold">
                     <Link href="#" className="flex items-center">
                       Read More <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>

@@ -50,22 +50,22 @@ export function Testimonials() {
           {testimonials.map((testimonial, index) => {
             const avatar = PlaceHolderImages.find((img) => img.id === testimonial.avatarId);
             return (
-              <Card key={index} className="bg-background p-6 flex flex-col justify-between transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-2">
+              <Card key={index} className="bg-background p-6 flex flex-col justify-between transition-all duration-300 hover:shadow-lg hover:shadow-primary/30 hover:-translate-y-1 hover:border-primary/50">
                 <CardContent className="p-0 space-y-4">
                   <Rating />
-                  <blockquote className="text-lg text-foreground/90">
+                  <blockquote className="text-lg text-foreground/90 leading-relaxed">
                     "{testimonial.testimony}"
                   </blockquote>
                 </CardContent>
                 <div className="mt-6 flex items-center gap-4">
                   {avatar && (
-                     <Avatar className="h-12 w-12">
+                     <Avatar className="h-12 w-12 border-2 border-primary/50">
                         <AvatarImage src={avatar.imageUrl} alt={avatar.description} data-ai-hint={avatar.imageHint} />
                         <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
                     </Avatar>
                   )}
                   <div>
-                    <p className="font-semibold">{testimonial.name}</p>
+                    <p className="font-semibold text-foreground">{testimonial.name}</p>
                     <p className="text-sm text-muted-foreground">{testimonial.location}</p>
                   </div>
                 </div>
