@@ -103,18 +103,16 @@ export function Hero() {
                                 asChild
                                 size="lg"
                                 variant="outline"
-                                className="rounded-lg px-5 text-base border-accent text-accent hover:bg-accent hover:text-accent-foreground">
+                                className="border-accent text-accent hover:bg-accent hover:text-accent-foreground">
                                 <Link href="#messages">
                                     <span className="text-nowrap">Latest Messages</span>
                                 </Link>
                             </Button>
                         
                         <Button
-                            key={2}
                             asChild
                             size="lg"
-                            variant="ghost"
-                            className="h-10.5 rounded-lg px-5">
+                            variant="ghost">
                             <Link href="#about">
                                 <span className="text-nowrap">Our Mission</span>
                             </Link>
