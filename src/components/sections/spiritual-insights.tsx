@@ -49,6 +49,18 @@ const insights = [
       "Find strength and hope in God's promises when facing the trials and tribulations of life.",
     href: "#",
   },
+  {
+      id: "insight-post-6",
+      title: "The Heart of a Worshipper",
+      description: "Explore what it truly means to worship God in spirit and in truth, beyond just music and songs.",
+      href: "#"
+  },
+  {
+      id: "insight-post-7",
+      title: "Hearing the Voice of God",
+      description: "Practical tips to discern God's voice from the noise of everyday life.",
+      href: "#"
+  }
 ];
 
 const items = insights.map((insight) => {
