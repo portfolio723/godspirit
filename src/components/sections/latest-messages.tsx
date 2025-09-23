@@ -1,9 +1,5 @@
-import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { PlayCircle } from "lucide-react";
+import { VideoPlayer } from "@/components/ui/video-thumbnail-player";
 
 const messages = [
   {
@@ -11,18 +7,21 @@ const messages = [
     title: "The Unshakeable Kingdom",
     category: "Sermon",
     description: "Discover the stability and security found only in God's eternal kingdom.",
+    videoUrl: "https://www.youtube.com/embed/ScfQDc0M_3c",
   },
   {
     id: "message-video-2",
     title: "A Word for the Season",
     category: "Prophetic",
     description: "A timely and encouraging prophetic word to navigate the current times.",
+    videoUrl: "https://www.youtube.com/embed/u_juhS63wS4",
   },
   {
     id: "message-video-3",
     title: "Intercession for Breakthrough",
     category: "Prayer",
     description: "Join in a powerful time of prayer for breakthrough in your life and family.",
+    videoUrl: "https://www.youtube.com/embed/n_34-saN2oM",
   },
 ];
 
@@ -42,32 +41,14 @@ export function LatestMessages() {
           {messages.map((message) => {
             const image = PlaceHolderImages.find((img) => img.id === message.id);
             return (
-              <Card key={message.id} className="overflow-hidden flex flex-col group transition-all duration-300 hover:shadow-lg hover:shadow-primary/30 hover:-translate-y-1 hover:border-primary/50">
-                <CardHeader className="p-0 relative">
-                  {image && (
-                    <Image
-                      src={image.imageUrl}
-                      alt={image.description}
-                      data-ai-hint={image.imageHint}
-                      width={600}
-                      height={400}
-                      className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-                    />
-                  )}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
-                   <Badge variant={message.category === 'Sermon' ? 'default' : 'secondary'} className="absolute top-4 right-4">{message.category}</Badge>
-                </CardHeader>
-                <CardContent className="flex-1 p-6 space-y-2">
-                  <CardTitle className="text-xl font-bold leading-tight">{message.title}</CardTitle>
-                  <p className="text-muted-foreground text-sm">{message.description}</p>
-                </CardContent>
-                <CardFooter className="p-6 pt-0">
-                  <Button className="w-full">
-                    <PlayCircle className="mr-2 h-5 w-5" />
-                    Watch Now
-                  </Button>
-                </CardFooter>
-              </Card>
+                image && <VideoPlayer
+                    key={message.id}
+                    thumbnailUrl={image.imageUrl}
+                    videoUrl={message.videoUrl}
+                    title={message.title}
+                    description={message.description}
+                    category={message.category}
+                />
             );
           })}
         </div>
