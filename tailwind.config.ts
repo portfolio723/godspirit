@@ -9,6 +9,19 @@ export default {
   ],
   theme: {
     extend: {
+      fontSize: {
+        hero: 'clamp(2.5rem, 6vw, 4rem)',
+        h1: 'clamp(2rem, 5vw, 3rem)',
+        h2: 'clamp(1.5rem, 4vw, 2.25rem)',
+        h3: 'clamp(1.25rem, 3vw, 1.75rem)',
+        body: 'clamp(1rem, 2.5vw, 1.125rem)',
+        sm: '0.875rem',
+      },
+      lineHeight: {
+        tight: '1.2',
+        normal: '1.5',
+        relaxed: '1.75',
+      },
       fontFamily: {
         body: ['Inter', 'sans-serif'],
         headline: ["'Playfair Display'", 'serif'],

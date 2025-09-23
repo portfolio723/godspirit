@@ -20,13 +20,13 @@ export function Hero() {
       )}
       <div className="absolute inset-0 bg-black/60" />
       <div className="relative z-10 flex flex-col items-center p-4">
-        <h1 className="text-4xl font-bold md:text-6xl lg:text-7xl">
+        <h1 className="text-hero font-bold">
           "She prospers in all that she does"
         </h1>
-        <p className="mt-4 text-xl md:text-2xl text-primary font-headline">
+        <p className="mt-4 text-h3 text-primary font-headline">
           Psalms 1:3
         </p>
-        <p className="mt-6 max-w-2xl text-lg text-foreground/80">
+        <p className="mt-6 max-w-2xl text-body text-foreground/80">
           Welcome to a space of spiritual nourishment and divine encounter. Discover messages that inspire, insights that enlighten, and a community that uplifts.
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-4">

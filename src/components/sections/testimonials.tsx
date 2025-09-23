@@ -40,10 +40,10 @@ export function Testimonials() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-primary">
+            <h2 className="text-h1 font-bold tracking-tighter text-primary">
               Lives Being Transformed
             </h2>
-            <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+            <p className="max-w-[900px] text-muted-foreground text-body/relaxed">
               Hear from some of the many people whose lives have been touched and changed by the power of God through this ministry.
             </p>
           </div>

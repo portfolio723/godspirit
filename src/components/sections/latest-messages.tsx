@@ -32,10 +32,10 @@ export function LatestMessages() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-primary">
+            <h2 className="text-h1 font-bold tracking-tighter text-primary">
               Latest Messages
             </h2>
-            <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+            <p className="max-w-[900px] text-muted-foreground text-body/relaxed">
               Dive into our recent teachings, prophetic words, and prayer sessions. Be blessed, encouraged, and transformed by the Word of God.
             </p>
           </div>
@@ -60,7 +60,7 @@ export function LatestMessages() {
                    <Badge variant={message.category === 'Sermon' ? 'default' : 'secondary'} className="absolute top-4 right-4">{message.category}</Badge>
                 </CardHeader>
                 <CardContent className="flex-1 p-6 space-y-2">
-                  <CardTitle className="text-xl font-bold">{message.title}</CardTitle>
+                  <CardTitle className="text-h3 font-bold">{message.title}</CardTitle>
                   <p className="text-muted-foreground">{message.description}</p>
                 </CardContent>
                 <CardFooter>

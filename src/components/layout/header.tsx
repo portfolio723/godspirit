@@ -24,7 +24,7 @@ export function Header() {
         <div className="mr-4 flex">
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <Sprout className="h-6 w-6 text-primary" />
-            <span className="font-headline text-2xl font-bold text-primary">
+            <span className="font-headline text-h3 font-bold text-primary">
               Divine Canvas
             </span>
           </Link>
@@ -55,7 +55,7 @@ export function Header() {
                 <SheetClose asChild>
                   <Link href="/" className="mb-4 flex items-center space-x-2">
                     <Sprout className="h-6 w-6 text-primary" />
-                    <span className="font-headline text-xl font-bold text-primary">
+                    <span className="font-headline text-h2 font-bold text-primary">
                       Divine Canvas
                     </span>
                   </Link>

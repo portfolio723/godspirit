@@ -33,10 +33,10 @@ export function SpiritualInsights() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-primary">
+            <h2 className="text-h1 font-bold tracking-tighter text-primary">
               Spiritual Insights
             </h2>
-            <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+            <p className="max-w-[900px] text-muted-foreground text-body/relaxed">
               Explore articles that delve deeper into scripture, offer practical wisdom, and encourage a closer walk with God.
             </p>
           </div>
@@ -63,7 +63,7 @@ export function SpiritualInsights() {
                     <Badge variant="outline">{insight.category}</Badge>
                     <span>{insight.readingTime}</span>
                   </div>
-                  <CardTitle className="text-xl font-bold">{insight.title}</CardTitle>
+                  <CardTitle className="text-h3 font-bold">{insight.title}</CardTitle>
                 </CardContent>
                 <CardFooter>
                   <Button variant="ghost" asChild className="text-primary hover:text-primary/80">
