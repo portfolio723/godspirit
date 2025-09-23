@@ -1,3 +1,4 @@
+
 "use client";
 
 import { ArrowLeft, ArrowRight } from "lucide-react";
@@ -172,13 +173,9 @@ export function SpiritualInsights() {
                     <div className="absolute inset-x-0 bottom-0 flex flex-col items-start p-6 text-primary-foreground md:p-8">
                        <div className="flex items-center gap-2">
                         <Badge variant="secondary" className="bg-accent/20 text-accent border-transparent">{item.category}</Badge>
-                        <span className="text-sm">{item.readingTime} min read</span>
                        </div>
                       <div className="mb-2 pt-4 text-xl font-semibold md:mb-3 md:pt-4 lg:pt-4">
                         {item.title}
-                      </div>
-                      <div className="mb-8 line-clamp-2 md:mb-12 lg:mb-9">
-                        {item.description}
                       </div>
                       <div className="flex items-center text-sm">
                         Read more{" "}
