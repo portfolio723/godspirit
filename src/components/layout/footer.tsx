@@ -2,7 +2,7 @@
 import React from 'react';
 import type { ComponentProps, ReactNode } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
-import { Sprout, Twitter, Facebook, Instagram, Youtube, Linkedin } from "lucide-react";
+import { Crown, Twitter, Facebook, Instagram, Youtube, Linkedin } from "lucide-react";
 
 interface FooterLink {
  	title: string;
@@ -57,7 +57,7 @@ export function Footer() {
  				<AnimatedContainer className="space-y-4">
                     <div className="flex flex-col items-start">
                         <a href="/" className="mb-4 flex items-center space-x-2">
-                        <Sprout className="h-8 w-8 text-primary" />
+                        <Crown className="h-8 w-8 text-accent" />
                         <span className="font-headline text-2xl font-bold text-primary">
                             God Spirit Says
                         </span>

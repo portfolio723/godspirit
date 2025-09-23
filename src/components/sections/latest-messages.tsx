@@ -27,7 +27,7 @@ const messages = [
 
 export function LatestMessages() {
   return (
-    <section id="messages" className="w-full py-16 sm:py-24 lg:py-32 bg-card">
+    <section id="messages" className="w-full py-16 sm:py-24 lg:py-32 bg-background">
       <div className="container mx-auto px-4 md:px-6">
         <div className="mb-12 space-y-4 text-center">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary">

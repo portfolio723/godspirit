@@ -79,7 +79,7 @@ export function SpiritualInsights() {
   }, [carouselApi]);
 
   return (
-    <section id="insights" className="py-16 sm:py-24 lg:py-32 bg-background">
+    <section id="insights" className="py-16 sm:py-24 lg:py-32 bg-card">
       <div className="container mx-auto">
         <div className="mb-8 flex items-end justify-between md:mb-14 lg:mb-16">
           <div className="flex flex-col gap-4">

@@ -5,6 +5,7 @@ import { TestimonialsColumn } from "@/components/ui/testimonials-columns-1";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { Badge } from "@/components/ui/badge";
 
 const testimonials = [
   {
@@ -65,12 +66,12 @@ export function Testimonials() {
           viewport={{ once: true }}
           className="flex flex-col items-center justify-center max-w-[540px] mx-auto text-center"
         >
-          <div className="border py-1 px-4 rounded-lg">Testimonials</div>
+          <Badge variant="outline" className="border-accent text-accent">Testimonials</Badge>
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold tracking-tighter mt-5">
-            What our users say
+            Lives Touched by the Spirit
           </h2>
           <p className="text-center mt-5 opacity-75">
-            See what our customers have to say about us.
+            Discover the transformative power of faith through the stories of our community members.
           </p>
         </motion.div>
 
@@ -88,7 +89,7 @@ export function Testimonials() {
           />
         </div>
         <div className="mt-12 text-center">
-          <Button size="lg" asChild>
+          <Button size="lg" asChild variant="outline" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground">
             <Link href="#">Share Your Story</Link>
           </Button>
         </div>

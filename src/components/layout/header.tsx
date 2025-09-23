@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import React from 'react';
-import { Menu, Sprout, X } from "lucide-react";
+import { Menu, Crown, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -33,7 +33,7 @@ export function Header() {
                     <div className="relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4">
                         <div className="flex w-full justify-between lg:w-auto">
                             <Link href="/" className="flex items-center space-x-2">
-                                <Sprout className="h-6 w-6 text-primary" />
+                                <Crown className="h-6 w-6 text-accent" />
                                 <span className="font-headline text-xl font-bold text-primary">
                                 God Spirit Says
                                 </span>
@@ -80,6 +80,7 @@ export function Header() {
                                 <Button
                                     asChild
                                     size="sm"
+                                    variant="outline"
                                 >
                                     <Link href="#contact">
                                         <span>Get In Touch</span>

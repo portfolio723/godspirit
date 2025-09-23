@@ -73,10 +73,10 @@ export function Hero() {
                 <div className="text-center sm:mx-auto lg:mr-auto lg:mt-0">
                     <AnimatedGroup variants={transitionVariants}>
                         <h1
-                            className="hero-title mt-8 max-w-4xl mx-auto text-balance text-white">
+                            className="hero-title mt-8 max-w-4xl mx-auto text-balance text-foreground">
                             "She prospers in all that she does"
                         </h1>
-                        <p className="scripture-quote mt-4 text-primary">
+                        <p className="scripture-quote mt-4 text-accent">
                             Psalms 1:3
                         </p>
                         <p
@@ -98,18 +98,17 @@ export function Hero() {
                             ...transitionVariants,
                         }}
                         className="mt-12 flex flex-col items-center justify-center gap-2 md:flex-row">
-                        <div
-                            key={1}
-                            className="bg-foreground/10 rounded-md border p-0.5">
+                        
                             <Button
                                 asChild
                                 size="lg"
-                                className="rounded-lg px-5 text-base">
+                                variant="outline"
+                                className="rounded-lg px-5 text-base border-accent text-accent hover:bg-accent hover:text-accent-foreground">
                                 <Link href="#messages">
                                     <span className="text-nowrap">Latest Messages</span>
                                 </Link>
                             </Button>
-                        </div>
+                        
                         <Button
                             key={2}
                             asChild

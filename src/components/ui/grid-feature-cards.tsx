@@ -24,12 +24,12 @@ export function FeatureCard({ feature, className, ...props }: FeatureCardPorps) 
 						x="-12"
 						y="4"
 						squares={p}
-						className="fill-foreground/5 stroke-border/40 absolute inset-0 h-full w-full mix-blend-overlay"
+						className="fill-accent/10 stroke-border/40 absolute inset-0 h-full w-full mix-blend-overlay"
 					/>
 				</div>
 			</div>
-			<feature.icon className="text-primary size-6" strokeWidth={1} aria-hidden />
-			<h3 className="mt-10 text-base md:text-lg font-semibold">{feature.title}</h3>
+			<feature.icon className="text-accent size-6" strokeWidth={1.5} aria-hidden />
+			<h3 className="mt-10 text-base md:text-lg font-semibold text-foreground">{feature.title}</h3>
 			<p className="text-muted-foreground relative z-20 mt-2 text-sm font-light">{feature.description}</p>
 		</div>
 	);

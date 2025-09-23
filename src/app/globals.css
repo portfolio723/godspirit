@@ -5,24 +5,24 @@
 @layer base {
   :root {
     --background: 0 0 3%;
-    --foreground: 210 20% 98%;
-    --card: 0 0% 10%;
-    --card-foreground: 210 20% 98%;
+    --foreground: 0 0% 100%;
+    --card: 300 50% 12%;
+    --card-foreground: 0 0% 100%;
     --popover: 0 0 3%;
-    --popover-foreground: 210 20% 98%;
-    --primary: 262 84% 60%;
-    --primary-foreground: 210 20% 98%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 300 50% 40%;
+    --primary-foreground: 0 0% 100%;
     --secondary: 215 28% 17%;
-    --secondary-foreground: 210 20% 98%;
+    --secondary-foreground: 0 0% 100%;
     --muted: 220 14% 60%;
     --muted-foreground: 220 9% 46%;
-    --accent: 215 28% 17%;
-    --accent-foreground: 210 20% 98%;
+    --accent: 43 100% 50%;
+    --accent-foreground: 300 50% 15%;
     --destructive: 0 63% 31%;
-    --destructive-foreground: 210 20% 98%;
-    --border: 262 84% 60% / 0.2;
+    --destructive-foreground: 0 0% 100%;
+    --border: 300 50% 40% / 0.2;
     --input: 215 28% 17%;
-    --ring: 262 84% 60%;
+    --ring: 43 100% 50%;
     --radius: 0rem;
 
     --font-primary: 'Playfair Display', serif;    /* For headings */
@@ -43,24 +43,24 @@
 
   .dark {
     --background: 0 0 3%;
-    --foreground: 210 20% 98%;
-    --card: 0 0% 10%;
-    --card-foreground: 210 20% 98%;
+    --foreground: 0 0% 100%;
+    --card: 300 50% 12%;
+    --card-foreground: 0 0% 100%;
     --popover: 0 0 3%;
-    --popover-foreground: 210 20% 98%;
-    --primary: 262 84% 60%;
-    --primary-foreground: 210 20% 98%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 300 50% 40%;
+    --primary-foreground: 0 0% 100%;
     --secondary: 215 28% 17%;
-    --secondary-foreground: 210 20% 98%;
+    --secondary-foreground: 0 0% 100%;
     --muted: 220 14% 60%;
     --muted-foreground: 220 9% 46%;
-    --accent: 215 28% 17%;
-    --accent-foreground: 210 20% 98%;
+    --accent: 43 100% 50%;
+    --accent-foreground: 300 50% 15%;
     --destructive: 0 63% 31%;
-    --destructive-foreground: 210 20% 98%;
-    --border: 262 84% 60% / 0.2;
+    --destructive-foreground: 0 0% 100%;
+    --border: 300 50% 40% / 0.2;
     --input: 215 28% 17%;
-    --ring: 262 84% 60%;
+    --ring: 43 100% 50%;
   }
 }
 
@@ -80,9 +80,11 @@
   }
   h1 {
     font-size: var(--fs-h1);
+    color: hsl(var(--primary));
   }
   h2 {
     font-size: var(--fs-h2);
+     color: hsl(var(--primary));
   }
   h3 {
     font-size: var(--fs-h3);
