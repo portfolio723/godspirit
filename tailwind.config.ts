@@ -17,8 +17,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        body: ['var(--font-inter)'],
-        headline: ['var(--font-playfair-display)'],
+        body: ['var(--font-body)'],
+        headline: ['var(--font-primary)'],
+        script: ['var(--font-script)'],
       },
       colors: {
         background: 'hsl(var(--background))',

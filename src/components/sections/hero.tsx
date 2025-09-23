@@ -73,10 +73,10 @@ export function Hero() {
                 <div className="text-center sm:mx-auto lg:mr-auto lg:mt-0">
                     <AnimatedGroup variants={transitionVariants}>
                         <h1
-                            className="mt-8 max-w-4xl mx-auto text-balance text-6xl md:text-7xl lg:mt-16 xl:text-[5.25rem] !leading-tight text-white">
+                            className="hero-title mt-8 max-w-4xl mx-auto text-balance text-white">
                             "She prospers in all that she does"
                         </h1>
-                        <p className="mt-4 text-2xl text-primary">
+                        <p className="scripture-quote mt-4 text-primary">
                             Psalms 1:3
                         </p>
                         <p
@@ -100,11 +100,11 @@ export function Hero() {
                         className="mt-12 flex flex-col items-center justify-center gap-2 md:flex-row">
                         <div
                             key={1}
-                            className="bg-foreground/10 rounded-[14px] border p-0.5">
+                            className="bg-foreground/10 rounded-md border p-0.5">
                             <Button
                                 asChild
                                 size="lg"
-                                className="rounded-xl px-5 text-base">
+                                className="rounded-lg px-5 text-base">
                                 <Link href="#messages">
                                     <span className="text-nowrap">Latest Messages</span>
                                 </Link>
@@ -115,7 +115,7 @@ export function Hero() {
                             asChild
                             size="lg"
                             variant="ghost"
-                            className="h-10.5 rounded-xl px-5">
+                            className="h-10.5 rounded-lg px-5">
                             <Link href="#about">
                                 <span className="text-nowrap">Our Mission</span>
                             </Link>
