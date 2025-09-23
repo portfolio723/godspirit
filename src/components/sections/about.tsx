@@ -21,14 +21,14 @@ export function About() {
             </p>
           </div>
           <div className="space-y-2">
-            <h3 className="text-h3 font-bold tracking-tighter">Mission Statement</h3>
+            <h3 className="text-h3 font-bold tracking-tighter text-foreground">Mission Statement</h3>
             <p className="max-w-[600px] text-muted-foreground text-body/relaxed">
               To empower believers to walk in the fullness of their God-given identity and prosper in every area of their lives through biblically-sound teaching, prophetic insight, and heartfelt prayer.
             </p>
           </div>
         </div>
         <div className="flex flex-col gap-4">
-          <h3 className="text-h3 font-bold tracking-tighter text-center lg:text-left">Ministry Impact</h3>
+          <h3 className="text-h3 font-bold tracking-tighter text-center lg:text-left text-foreground">Ministry Impact</h3>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {stats.map((stat) => (
               <Card key={stat.label} className="text-center bg-card hover:bg-primary/10 transition-colors">

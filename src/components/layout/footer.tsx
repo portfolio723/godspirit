@@ -31,7 +31,7 @@ export function Footer() {
             </p>
           </div>
           <div className="md:justify-self-center">
-            <h3 className="mb-4 text-h3 font-semibold">Explore</h3>
+            <h3 className="mb-4 text-h3 font-semibold text-foreground">Explore</h3>
             <ul className="space-y-2">
               {footerNav.map((item) => (
                 <li key={item.href}>
@@ -46,7 +46,7 @@ export function Footer() {
             </ul>
           </div>
           <div className="md:justify-self-end">
-             <h3 className="mb-4 text-h3 font-semibold">Connect With Us</h3>
+             <h3 className="mb-4 text-h3 font-semibold text-foreground">Connect With Us</h3>
             <div className="flex space-x-4">
               {socialLinks.map((social) => (
                 <Link
