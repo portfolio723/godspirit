@@ -1,6 +1,9 @@
+"use client";
+import React from "react";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { Card, CardContent } from "@/components/ui/card";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { TestimonialsColumn } from "@/components/ui/testimonials-columns-1";
+import { motion } from "motion/react";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Star } from "lucide-react";
@@ -9,69 +12,81 @@ const testimonials = [
   {
     avatarId: "testimonial-avatar-1",
     name: "Sarah L.",
-    location: "Texas, USA",
-    testimony: "The prophetic messages have been a light in a dark season for me and my family. We've experienced so much breakthrough. Thank you!",
+    role: "Texas, USA",
+    text: "The prophetic messages have been a light in a dark season for me and my family. We've experienced so much breakthrough. Thank you!",
   },
   {
     avatarId: "testimonial-avatar-2",
     name: "David O.",
-    location: "Lagos, Nigeria",
-    testimony: "I've grown so much in my understanding of the Word. The teachings are so rich and practical. I am truly being equipped to prosper.",
+    role: "Lagos, Nigeria",
+    text: "I've grown so much in my understanding of the Word. The teachings are so rich and practical. I am truly being equipped to prosper.",
   },
   {
     avatarId: "testimonial-avatar-3",
     name: "Maria G.",
-    location: "São Paulo, Brazil",
-    testimony: "Through this ministry, I found my calling. The encouragement and prayers gave me the strength to step into what God has for me.",
+    role: "São Paulo, Brazil",
+    text: "Through this ministry, I found my calling. The encouragement and prayers gave me the strength to step into what God has for me.",
+  },
+  {
+    avatarId: "testimonial-avatar-1",
+    name: "Sarah L.",
+    role: "Texas, USA",
+    text: "The prophetic messages have been a light in a dark season for me and my family. We've experienced so much breakthrough. Thank you!",
+  },
+  {
+    avatarId: "testimonial-avatar-2",
+    name: "David O.",
+    role: "Lagos, Nigeria",
+    text: "I've grown so much in my understanding of the Word. The teachings are so rich and practical. I am truly being equipped to prosper.",
+  },
+  {
+    avatarId: "testimonial-avatar-3",
+    name: "Maria G.",
+    role: "São Paulo, Brazil",
+    text: "Through this ministry, I found my calling. The encouragement and prayers gave me the strength to step into what God has for me.",
   },
 ];
 
-const Rating = ({ count = 5 }) => (
-  <div className="flex items-center gap-1">
-    {Array.from({ length: count }).map((_, i) => (
-      <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-    ))}
-  </div>
-);
+const enrichedTestimonials = testimonials.map(testimonial => {
+    const image = PlaceHolderImages.find(img => img.id === testimonial.avatarId);
+    return { ...testimonial, image: image?.imageUrl || '' };
+});
+
+const firstColumn = enrichedTestimonials.slice(0, 2);
+const secondColumn = enrichedTestimonials.slice(2, 4);
+const thirdColumn = enrichedTestimonials.slice(4, 6);
 
 export function Testimonials() {
   return (
-    <section id="testimonials" className="w-full py-16 sm:py-24 lg:py-32 bg-card">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="mb-12 space-y-4 text-center">
+    <section id="testimonials" className="w-full py-16 sm:py-24 lg:py-32 bg-card relative">
+      <div className="container z-10 mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+          viewport={{ once: true }}
+          className="flex flex-col items-center justify-center max-w-[540px] mx-auto text-center"
+        >
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary">
             Lives Being Transformed
           </h2>
-          <p className="max-w-3xl mx-auto text-muted-foreground md:text-xl/relaxed">
+          <p className="mt-4 max-w-3xl mx-auto text-muted-foreground md:text-xl/relaxed">
             Hear from some of the many people whose lives have been touched and changed by the power of God through this ministry.
           </p>
-        </div>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {testimonials.map((testimonial, index) => {
-            const avatar = PlaceHolderImages.find((img) => img.id === testimonial.avatarId);
-            return (
-              <Card key={index} className="bg-background p-6 flex flex-col justify-between transition-all duration-300 hover:shadow-lg hover:shadow-primary/30 hover:-translate-y-1 hover:border-primary/50">
-                <CardContent className="p-0 space-y-4">
-                  <Rating />
-                  <blockquote className="text-lg text-foreground/90 leading-relaxed">
-                    "{testimonial.testimony}"
-                  </blockquote>
-                </CardContent>
-                <div className="mt-6 flex items-center gap-4">
-                  {avatar && (
-                     <Avatar className="h-12 w-12 border-2 border-primary/50">
-                        <AvatarImage src={avatar.imageUrl} alt={avatar.description} data-ai-hint={avatar.imageHint} />
-                        <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
-                    </Avatar>
-                  )}
-                  <div>
-                    <p className="font-semibold text-foreground">{testimonial.name}</p>
-                    <p className="text-sm text-muted-foreground">{testimonial.location}</p>
-                  </div>
-                </div>
-              </Card>
-            );
-          })}
+        </motion.div>
+
+        <div className="flex justify-center gap-6 mt-10 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] max-h-[740px] overflow-hidden">
+          <TestimonialsColumn testimonials={firstColumn} duration={15} />
+          <TestimonialsColumn
+            testimonials={secondColumn}
+            className="hidden md:block"
+            duration={19}
+          />
+          <TestimonialsColumn
+            testimonials={thirdColumn}
+            className="hidden lg:block"
+            duration={17}
+          />
         </div>
         <div className="mt-12 text-center">
           <Button size="lg" asChild>
