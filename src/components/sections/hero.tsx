@@ -39,7 +39,7 @@ export function Hero() {
                     priority
                 />
             </div>
-            <div aria-hidden className="absolute inset-0 -z-10 size-full bg-gradient-to-b from-black/60 to-background" />
+            
             <div className="mx-auto max-w-7xl px-6">
                 <div className="text-center sm:mx-auto lg:mr-auto lg:mt-0">
                     <AnimatedGroup variants={transitionVariants}>
@@ -66,10 +66,11 @@ export function Hero() {
                         }}
                         className="mt-12 flex justify-center w-[100%] max-w-[600px] mx-auto">
                         <iframe
-                            className="h-[152px] w-full"
+                            className="w-full sm:h-[152px]"
                             style={{ borderRadius: "0px" }}
                             src="https://open.spotify.com/embed/playlist/4RJDF7epzblJDsPwKx9XXl?utm_source=generator&theme=0"
                             width="100%"
+                            height="152"
                             frameBorder="0"
                             allowFullScreen={true}
                             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
