@@ -1,8 +1,15 @@
 import Link from 'next/link'
 import { ChevronRight } from 'lucide-react'
-import Image from 'next/image';
+import Image, { type StaticImageData } from 'next/image';
 
-const logos = [
+interface Logo {
+    src: StaticImageData | string;
+    alt: string;
+    width: number;
+    height: number;
+}
+
+const logos: Logo[] = [
     { src: "/assets/ktfTemppng_38127549_1701443839.png", alt: "KTF Logo", width: 90, height: 90 },
     { src: "/assets/144 1.png", alt: "Fox Interviewer Logo", width: 120, height: 40 },
     { src: "/assets/1666 1.png", alt: "Rolling Stone Logo", width: 120, height: 40 },
@@ -33,6 +40,7 @@ export function LogoCloud() {
                                 alt={logo.alt}
                                 width={logo.width}
                                 height={logo.height}
+                                unoptimized
                             />
                         </div>
                     ))}
