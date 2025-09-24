@@ -65,7 +65,7 @@ export function Hero() {
                             },
                             ...transitionVariants,
                         }}
-                        className="mt-12 flex justify-center max-w-xl mx-auto">
+                        className="mt-12 flex justify-center w-full max-w-[600px] mx-auto">
                         <iframe
                             className="h-[152px] sm:h-[352px]"
                             style={{ borderRadius: '12px' }}
