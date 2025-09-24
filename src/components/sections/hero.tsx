@@ -32,7 +32,7 @@ export function Hero() {
         <div className="relative">
              <div className="absolute inset-0 -z-20 h-full w-full overflow-hidden">
                 <Image
-                    src="/assets/hero.jpg"
+                    src="https://images.unsplash.com/photo-1501436513145-30f24e19fcc8?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     alt="Hero background image"
                     fill
                     className="object-cover"
@@ -69,7 +69,7 @@ export function Hero() {
                             className="w-full sm:h-[152px]"
                             style={{ borderRadius: "0px" }}
                             src="https://open.spotify.com/embed/playlist/4RJDF7epzblJDsPwKx9XXl?utm_source=generator&theme=0"
-                            width="100%"
+                            width="600px"
                             height="152"
                             frameBorder="0"
                             allowFullScreen={true}
