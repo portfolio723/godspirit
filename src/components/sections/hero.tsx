@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { AnimatedGroup } from "@/components/ui/animated-group";
 import Image from "next/image";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 const transitionVariants = {
     item: {
@@ -28,21 +27,17 @@ const transitionVariants = {
 
 
 export function Hero() {
-    const heroImage = PlaceHolderImages.find(img => img.id === 'hero-background');
-
   return (
     <section className="py-16 sm:py-24 lg:py-32">
         <div className="relative">
              <div className="absolute inset-0 -z-20 h-full w-full overflow-hidden">
-                {heroImage && (
-                    <Image
-                        src={heroImage.imageUrl}
-                        alt={heroImage.description}
-                        fill
-                        className="object-cover"
-                        priority
-                    />
-                )}
+                <Image
+                    src="/assets/hero.jpg"
+                    alt="Hero background image"
+                    fill
+                    className="object-cover"
+                    priority
+                />
             </div>
             <div aria-hidden className="absolute inset-0 -z-10 size-full bg-gradient-to-b from-black/60 to-background" />
             <div className="mx-auto max-w-7xl px-6">
@@ -71,7 +66,7 @@ export function Hero() {
                         }}
                         className="mt-12 flex justify-center w-[100%] max-w-[600px] mx-auto">
                         <iframe
-                            className="h-[152px] sm:h-[152px] w-full"
+                            className="h-[152px] w-full"
                             style={{ borderRadius: "0px" }}
                             src="https://open.spotify.com/embed/playlist/4RJDF7epzblJDsPwKx9XXl?utm_source=generator&theme=0"
                             width="100%"
