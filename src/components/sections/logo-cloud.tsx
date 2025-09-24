@@ -3,12 +3,12 @@ import { ChevronRight } from 'lucide-react'
 import Image from 'next/image';
 
 const logos = [
-    { src: "/assets/ktfTemppng_38127549_1701443839.png", alt: "KTF Logo", width: 90, height: 20 },
-    { src: "/assets/144 1.png", alt: "144 Logo", width: 90, height: 16 },
-    { src: "/assets/1666 1.png", alt: "1666 Logo", width: 90, height: 16 },
-    { src: "/assets/dallas.png", alt: "Dallas Logo", width: 90, height: 16 },
-    { src: "/assets/123.png", alt: "123 Logo", width: 90, height: 24 },
-    { src: "/assets/133 1.png", alt: "133 1 Logo", width: 90, height: 28 },
+    { src: "/assets/ktfTemppng_38127549_1701443839.png", alt: "KTF Logo", width: 90, height: 90 },
+    { src: "/assets/144 1.png", alt: "Fox Interviewer Logo", width: 120, height: 40 },
+    { src: "/assets/1666 1.png", alt: "Rolling Stone Logo", width: 120, height: 40 },
+    { src: "/assets/dallas.png", alt: "Voyage Dallas Logo", width: 120, height: 20 },
+    { src: "/assets/123.png", alt: "Jesus Wired Logo", width: 100, height: 40 },
+    { src: "/assets/133 1.png", alt: "Louder Than The Music Logo", width: 120, height: 20 },
     { src: "https://html.tailus.io/blocks/customers/openai.svg", alt: "OpenAI Logo", width: 90, height: 24 },
 ];
 
@@ -25,7 +25,7 @@ export function LogoCloud() {
                         <ChevronRight className="ml-1 inline-block size-3" />
                     </Link>
                 </div>
-                <div className="group-hover:blur-xs mx-auto mt-12 grid max-w-2xl grid-cols-4 gap-x-12 gap-y-12 transition-all duration-500 group-hover:opacity-50 sm:gap-x-16 sm:gap-y-14">
+                <div className="group-hover:blur-xs mx-auto mt-12 grid max-w-4xl grid-cols-2 items-center gap-x-12 gap-y-12 transition-all duration-500 group-hover:opacity-50 sm:grid-cols-4 sm:gap-x-16 sm:gap-y-14 md:max-w-5xl">
                     {logos.map((logo, index) => (
                         <div key={index} className="flex justify-center">
                             <Image
