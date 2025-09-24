@@ -8,8 +8,8 @@ const logos = [
     { src: "/assets/1666 1.png", alt: "1666 Logo", width: 90, height: 16 },
     { src: "/assets/dallas.png", alt: "Dallas Logo", width: 90, height: 16 },
     { src: "/assets/ktfTemppng_38127549_1701443839.png", alt: "KTF Logo", width: 90, height: 20 },
-    { src: "https://html.tailus.io/blocks/customers/laravel.svg", alt: "Laravel Logo", width: 90, height: 16 },
-    { src: "https://html.tailus.io/blocks/customers/lilly.svg", alt: "Lilly Logo", width: 90, height: 28 },
+    { src: "/assets/123.png", alt: "123 Logo", width: 90, height: 24 },
+    { src: "/assets/133 1.png", alt: "133 1 Logo", width: 90, height: 28 },
     { src: "https://html.tailus.io/blocks/customers/openai.svg", alt: "OpenAI Logo", width: 90, height: 24 },
 ];
 
