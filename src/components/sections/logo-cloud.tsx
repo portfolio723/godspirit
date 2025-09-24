@@ -3,7 +3,7 @@ import { ChevronRight } from 'lucide-react'
 import Image from 'next/image';
 
 const logos = [
-    { src: "https://html.tailus.io/blocks/customers/nvidia.svg", alt: "Nvidia Logo", width: 90, height: 20 },
+    { src: "https://miro.medium.com/v2/resize:fit:574/format:webp/1*aC1w4nphZQzoMPAxqkSQyQ.png", alt: "Nvidia Logo", width: 90, height: 20 },
     { src: "https://html.tailus.io/blocks/customers/column.svg", alt: "Column Logo", width: 90, height: 16 },
     { src: "https://html.tailus.io/blocks/customers/github.svg", alt: "GitHub Logo", width: 90, height: 16 },
     { src: "https://html.tailus.io/blocks/customers/nike.svg", alt: "Nike Logo", width: 90, height: 20 },
