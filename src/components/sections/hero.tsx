@@ -35,7 +35,7 @@ export function Hero() {
                     className="absolute min-h-full min-w-full object-cover"
                     src="/main.mp4"
                     autoPlay
-                    muted
+                    
                     loop
                     playsInline
                 ></video>
