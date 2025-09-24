@@ -3,9 +3,9 @@ import { ChevronRight } from 'lucide-react'
 import Image from 'next/image';
 
 const logos = [
-    { src: "/assets/11.png", alt: "11 Logo", width: 90, height: 20 },
-    { src: "/assets/144.png", alt: "144 Logo", width: 90, height: 16 },
-    { src: "/assets/1666.png", alt: "1666 Logo", width: 90, height: 16 },
+    { src: "/assets/11 1.png", alt: "11 Logo", width: 90, height: 20 },
+    { src: "/assets/144 1.png", alt: "144 Logo", width: 90, height: 16 },
+    { src: "/assets/1666 1.png", alt: "1666 Logo", width: 90, height: 16 },
     { src: "/assets/dallas.png", alt: "Dallas Logo", width: 90, height: 16 },
     { src: "/assets/ktfTemppng_38127549_1701443839.png", alt: "KTF Logo", width: 90, height: 20 },
     { src: "https://html.tailus.io/blocks/customers/laravel.svg", alt: "Laravel Logo", width: 90, height: 16 },
