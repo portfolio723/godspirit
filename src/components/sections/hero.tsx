@@ -33,7 +33,7 @@ export function Hero() {
              <div className="absolute inset-0 -z-20 h-full w-full overflow-hidden">
                 <video
                     className="absolute min-h-full min-w-full object-cover"
-                    src="/main.mp4"
+                    src="/assets/main.mp4"
                     autoPlay
                     muted
                     loop
@@ -67,7 +67,7 @@ export function Hero() {
                         }}
                         className="mt-12 flex justify-center w-full max-w-[600px] mx-auto">
                         <iframe
-                            className="h-[152px] sm:h-[152px] w-[100%] sm:w-[600px]"
+                            className="h-[152px] sm:h-[352px] w-full sm:w-[600px]"
                             style={{ borderRadius: '12px' }}
                             src="https://open.spotify.com/embed/playlist/4RJDF7epzblJDsPwKx9XXl?utm_source=generator&theme=0"
                             width="100%"
