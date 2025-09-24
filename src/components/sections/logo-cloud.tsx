@@ -9,7 +9,6 @@ const logos = [
     { src: "/assets/dallas.png", alt: "Voyage Dallas Logo", width: 120, height: 20 },
     { src: "/assets/123.png", alt: "Jesus Wired Logo", width: 100, height: 40 },
     { src: "/assets/133 1.png", alt: "Louder Than The Music Logo", width: 120, height: 20 },
-    { src: "https://html.tailus.io/blocks/customers/openai.svg", alt: "OpenAI Logo", width: 90, height: 24 },
 ];
 
 export function LogoCloud() {
@@ -25,7 +24,7 @@ export function LogoCloud() {
                         <ChevronRight className="ml-1 inline-block size-3" />
                     </Link>
                 </div>
-                <div className="group-hover:blur-xs mx-auto mt-12 grid max-w-4xl grid-cols-2 items-center gap-x-12 gap-y-12 transition-all duration-500 group-hover:opacity-50 sm:grid-cols-4 sm:gap-x-16 sm:gap-y-14 md:max-w-5xl">
+                <div className="group-hover:blur-xs mx-auto mt-12 grid max-w-4xl grid-cols-2 items-center gap-x-12 gap-y-12 transition-all duration-500 group-hover:opacity-50 md:grid-cols-3 sm:gap-x-16 sm:gap-y-14 md:max-w-5xl">
                     {logos.map((logo, index) => (
                         <div key={index} className="flex justify-center">
                             <Image
