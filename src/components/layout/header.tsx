@@ -34,7 +34,7 @@ export function Header() {
                         <div className="flex w-full justify-between lg:w-auto">
                             <Link href="/" className="flex items-center space-x-2">
                                 <Crown className="h-6 w-6 text-accent" />
-                                <span className="font-headline text-xl font-bold text-primary">
+                                <span className="font-body text-xl font-bold text-primary">
                                 God Spirit Says
                                 </span>
                             </Link>

@@ -59,7 +59,7 @@ export function Footer() {
                     <div className="flex flex-col items-start">
                         <Link href="/" className="mb-4 flex items-center space-x-2">
                         <Crown className="h-8 w-8 text-accent" />
-                        <span className="font-headline text-2xl font-bold text-primary">
+                        <span className="font-body text-2xl font-bold text-primary">
                             God Spirit Says
                         </span>
                         </Link>
