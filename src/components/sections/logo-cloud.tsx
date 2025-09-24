@@ -30,7 +30,7 @@ export function LogoCloud() {
                     {logos.map((logo, index) => (
                         <div key={index} className="flex justify-center">
                             <Image
-                                className="mx-auto w-fit dark:invert"
+                                className="mx-auto w-fit"
                                 src={logo.src}
                                 alt={logo.alt}
                                 width={logo.width}
