@@ -4,6 +4,7 @@ import * as React from "react";
 import { cn } from "@/lib/utils";
 import { Play, X } from "lucide-react";
 import Image from "next/image";
+import { Badge } from "@/components/ui/badge";
 
 // Interface for component props
 interface VideoPlayerProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -11,6 +12,7 @@ interface VideoPlayerProps extends React.HTMLAttributes<HTMLDivElement> {
   videoUrl: string;
   title: string;
   description?: string;
+  category?: string;
 }
 
 const VideoPlayer = React.forwardRef<HTMLDivElement, VideoPlayerProps>(
@@ -21,6 +23,7 @@ const VideoPlayer = React.forwardRef<HTMLDivElement, VideoPlayerProps>(
       videoUrl,
       title,
       description,
+      category,
       ...props
     },
     ref
@@ -82,6 +85,14 @@ const VideoPlayer = React.forwardRef<HTMLDivElement, VideoPlayerProps>(
               <Play className="h-8 w-8 fill-white text-white" />
             </div>
           </div>
+
+          {/* Category Badge */}
+          {category && (
+            <div className="absolute top-4 left-4">
+                <Badge variant="secondary" className="bg-accent/20 text-accent border-transparent">{category}</Badge>
+            </div>
+          )}
+
 
           {/* Title and Description */}
           <div className="absolute bottom-0 left-0 p-6">
