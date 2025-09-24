@@ -33,7 +33,7 @@ export function Hero() {
              <div className="absolute inset-0 -z-20 h-full w-full overflow-hidden">
                 <video
                     className="absolute min-h-full min-w-full object-cover"
-                    src="/assets/main.mp4"
+                    src="/main.mp4"
                     autoPlay
                     muted
                     loop
