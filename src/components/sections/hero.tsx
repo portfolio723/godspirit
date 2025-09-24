@@ -31,10 +31,6 @@ export function Hero() {
     <section className="py-16 sm:py-24 lg:py-32">
         <div className="relative">
              <div className="absolute inset-0 -z-20 h-full w-full overflow-hidden">
-                {/* 
-                  To use a video from an external URL, replace the `src` below with your video URL.
-                  Example: src="https://cdn.pixabay.com/video/2024/05/20/212625_large.mp4"
-                */}
                 <video
                     className="absolute min-h-full min-w-full object-cover"
                     src="/main.mp4"
@@ -49,7 +45,7 @@ export function Hero() {
                 <div className="text-center sm:mx-auto lg:mr-auto lg:mt-0">
                     <AnimatedGroup variants={transitionVariants}>
                         <h1 className="hero-title mt-8 max-w-4xl mx-auto text-balance text-foreground">
-                            {' "She prospers in all that she does" '}
+                            {` "She prospers in all that she does" `}
                             <span className="scripture-quote text-accent ml-4">- Psalms 1:3</span>
                         </h1>
                         <p
@@ -69,12 +65,12 @@ export function Hero() {
                             },
                             ...transitionVariants,
                         }}
-                        className="mt-12 flex justify-center max-w-5xl mx-auto">
+                        className="mt-12 flex justify-center max-w-xl mx-auto">
                         <iframe
+                            className="h-[152px] sm:h-[352px]"
                             style={{ borderRadius: '12px' }}
                             src="https://open.spotify.com/embed/playlist/4RJDF7epzblJDsPwKx9XXl?utm_source=generator&theme=0"
                             width="100%"
-                            height="152"
                             frameBorder="0"
                             allowFullScreen={true}
                             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
