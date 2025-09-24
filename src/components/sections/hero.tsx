@@ -67,7 +67,7 @@ export function Hero() {
                         }}
                         className="mt-12 flex justify-center w-[100%] max-w-[600px] mx-auto">
                         <iframe
-                            className="h-[152px] w-full"
+                            className="h-[152px] sm:h-[152px] w-[100%] sm:w-[600px]"
                             style={{ borderRadius: "0px" }}
                             src="https://open.spotify.com/embed/playlist/4RJDF7epzblJDsPwKx9XXl?utm_source=generator&theme=0"
                             width="100%"
