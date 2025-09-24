@@ -29,4 +29,25 @@ const nextConfig: NextConfig = {
         pathname: '/**',
       },
       {
-        protocol: 'https.
+        protocol: 'https',
+        hostname: 'miro.medium.com',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'html.tailus.io',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'voyagedallas.com',
+        port: '',
+        pathname: '/**',
+      }
+    ],
+  },
+};
+
+export default nextConfig;
