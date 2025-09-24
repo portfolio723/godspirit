@@ -3,9 +3,9 @@ import { ChevronRight } from 'lucide-react'
 import Image from 'next/image';
 
 const logos = [
-    { src: "https://miro.medium.com/v2/resize:fit:574/format:webp/1*aC1w4nphZQzoMPAxqkSQyQ.png", alt: "Nvidia Logo", width: 90, height: 20 },
-    { src: "https://html.tailus.io/blocks/customers/column.svg", alt: "Column Logo", width: 90, height: 16 },
-    { src: "https://html.tailus.io/blocks/customers/github.svg", alt: "GitHub Logo", width: 90, height: 16 },
+    { src: "https://miro.medium.com/v2/resize:fit:720/format:webp/1*87eDLnRGxgpi2bdJOzUg6g.png", alt: "Nvidia Logo", width: 90, height: 20 },
+    { src: "https://miro.medium.com/v2/resize:fit:640/format:webp/1*dZxWoTneMIO6QGbo-J0lQg.png", alt: "Column Logo", width: 90, height: 16 },
+    { src: "https://voyagedallas.com/wp-content/uploads/2024/04/dallas.png", alt: "GitHub Logo", width: 90, height: 16 },
     { src: "https://html.tailus.io/blocks/customers/nike.svg", alt: "Nike Logo", width: 90, height: 20 },
     { src: "https://html.tailus.io/blocks/customers/lemonsqueezy.svg", alt: "Lemon Squeezy Logo", width: 90, height: 20 },
     { src: "https://html.tailus.io/blocks/customers/laravel.svg", alt: "Laravel Logo", width: 90, height: 16 },
