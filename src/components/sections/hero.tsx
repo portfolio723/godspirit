@@ -37,7 +37,7 @@ export function Hero() {
                 */}
                 <video
                     className="absolute min-h-full min-w-full object-cover"
-                    src="/assets/main.mp4"
+                    src="/main.mp4"
                     autoPlay
                     muted
                     loop
@@ -49,7 +49,7 @@ export function Hero() {
                 <div className="text-center sm:mx-auto lg:mr-auto lg:mt-0">
                     <AnimatedGroup variants={transitionVariants}>
                         <h1 className="hero-title mt-8 max-w-4xl mx-auto text-balance text-foreground">
-                            {'"She prospers in all that she does"'}
+                            {`"She prospers in all that she does"`}
                             <span className="scripture-quote text-accent ml-4">- Psalms 1:3</span>
                         </h1>
                         <p
